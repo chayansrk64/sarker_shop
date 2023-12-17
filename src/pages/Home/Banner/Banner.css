@@ -1,19 +1,5 @@
-.banner {
-    background-image: url("https://media.istockphoto.com/id/514175379/photo/buying-smartphone.jpg?s=2048x2048&w=is&k=20&c=KTeYawCEe2RP9F-DxvElkdfNWS3ezyPxJE6t09UvxMg=");
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-.banner__heading h1{
+.banner__heading {
     position: absolute;
-    color: red;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    font-weight: 600;
-    letter-spacing: 12px;
+    z-index: 10;
+
 }

@@ -1,3 +1,4 @@
+import './Banner.css'
 
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
@@ -9,18 +10,16 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 
-
 // import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+// Autoplay should be in the swiper/modules below
+import {  Pagination, Navigation, Autoplay } from 'swiper/modules';
+import Button from '../../../components/Button/Button';
 
 
 const Banner = () => {
     return (
-        <div className='banner border-2 border-black h-100 '>
-            {/* <div className='banner__heading'>
-                <h1>Sarker Shop</h1>
-            </div> */}
- 
+        <div className='banner mt-16'>
+          
 
  <Swiper
         spaceBetween={30}
@@ -32,23 +31,75 @@ const Banner = () => {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        navigation={false}
+        // Autoplay should be in the modules below
+        modules={[  Pagination, Navigation]} 
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1
-            <div className='h-[700px]'>
-            <img src="https://media.istockphoto.com/id/514175379/photo/buying-smartphone.jpg?s=2048x2048&w=is&k=20&c=KTeYawCEe2RP9F-DxvElkdfNWS3ezyPxJE6t09UvxMg=" alt="" />
+        <SwiperSlide>
+            <div className=''>
+                <div className='absolute z-20 flex flex-col justify-center items-center w-full h-full'>
+                    <h3 className=' text-2xl text-white font-bold '>CHOOSE</h3>
+                    <h1 className='uppercase text-4xl md:text-6xl lg:text-6xl text-white font-bold mt-4 mb-6'>The latest gadget</h1>
+                    <Button buttonText="LEARN MORE"></Button>
+                </div>
+                <img src="https://focal-theme-carbon.myshopify.com/cdn/shop/files/tom-dixon-lp-tile-1.jpg?v=1630492908&width=2000" alt="" />
+            </div>
+            
+        </SwiperSlide>
+        <SwiperSlide>
+            <div className=' '>
+                <div className='absolute z-20 flex flex-col justify-center items-center w-full h-full'>
+                    
+                    <div>
+                        <h3 className=' text-2xl text-white font-bold '>CHOOSE</h3>
+                        <h1 className='uppercase text-4xl md:text-6xl lg:text-6xl text-white font-bold mt-4 mb-6'>new yearbuds</h1>
+                        <Button buttonText="LEARN MORE"></Button>
+                    </div>
+                    
+                </div>
+                <img src="https://focal-theme-carbon.myshopify.com/cdn/shop/files/mk-lp-tile-1.jpg?v=1630493139&width=2000" alt="" />
             </div>
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>
+            <div className=''>
+                    <div className='absolute z-20 flex flex-col justify-center items-center w-full h-full'>
+                        <h3 className=' text-2xl text-white font-bold '>CHOOSE</h3>
+                        <h1 className='uppercase text-4xl md:text-6xl lg:text-6xl text-white font-bold mt-4 mb-6'>sage collection</h1>
+                        <Button buttonText="LEARN MORE"></Button>
+                    </div>
+                    <div className='flex'>
+                        <div className='w-1/2'><img src="https://focal-theme-carbon.myshopify.com/cdn/shop/files/sage1-desktop.jpg?v=1630492840&width=2000" alt="" /></div>
+                        <div className='w-1/2'><img src="https://focal-theme-carbon.myshopify.com/cdn/shop/files/sage2-desktop.jpg?v=1630492847&width=1000" alt="" /></div>
+                    </div>
+            </div>
+        </SwiperSlide>
+        <SwiperSlide>
+            <div className=''>
+                 <div className='absolute z-20 flex flex-col justify-center items-center w-full h-full'>
+                    <div>
+                        <h3 className=' text-2xl text-white font-bold '>CHOOSE</h3>
+                        <h1 className='uppercase text-4xl md:text-6xl lg:text-6xl text-white font-bold mt-4 mb-6'>The best gadget</h1>
+                        <Button buttonText="LEARN MORE"></Button>
+                    </div>   
+                </div>
+                <img src="https://focal-theme-carbon.myshopify.com/cdn/shop/files/heritage-lp-3.jpg?v=1630492874&width=2000" alt="" />
+            </div>
+        </SwiperSlide>
+        <SwiperSlide>
+            <div>
+                <div className='absolute z-20 flex flex-col justify-center items-center w-full h-full'>
+                    <h3 className=' text-2xl text-white font-bold '>CHOOSE</h3>
+                    <h1 className='uppercase text-4xl md:text-6xl lg:text-6xl text-white font-bold mt-4 mb-6'>new jumps & powerbank</h1>
+                    <Button buttonText="LEARN MORE"></Button>
+                </div>
+                <div className=' flex'>
+                    <div className='w-1/2'><img src="https://focal-theme-carbon.myshopify.com/cdn/shop/files/jump2-desktop.jpg?v=1630492956&width=1000" alt="" /></div>
+                    <div className='w-1/2'><img src="https://focal-theme-carbon.myshopify.com/cdn/shop/files/jump1-desktop.jpg?v=1630492933&width=2000" alt="" /></div>       
+                </div>
+            </div>
+        </SwiperSlide>
+         
       </Swiper>
 
 
