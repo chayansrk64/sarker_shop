@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 
 
 // import required modules
-// Autoplay should be in the swiper/modules below
+
 import {  Pagination, Navigation, Autoplay } from 'swiper/modules';
 import Button from '../../../components/Button/Button';
 
@@ -19,7 +19,7 @@ import Button from '../../../components/Button/Button';
 const Banner = () => {
     return (
         <div className='banner mt-16'>
-          
+           
 
  <Swiper
         spaceBetween={30}
@@ -32,8 +32,7 @@ const Banner = () => {
           clickable: true,
         }}
         navigation={false}
-        // Autoplay should be in the modules below
-        modules={[  Pagination, Navigation]} 
+        modules={[Autoplay, Pagination, Navigation]} 
         className="mySwiper"
       >
         <SwiperSlide>
