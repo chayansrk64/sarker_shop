@@ -31,9 +31,12 @@ const Header = () => {
                   {navOptions}
                 </ul>
               </div>
-              <div className="navbar-end">
-                <a className="btn">Login</a>
+              {/* login and singup */}
+              <div className="navbar-end flex gap-2">
+                <Link to="/login" className="btn">Login</Link> 
+                <Link to="/signup" className="btn">SignUp</Link>
               </div>
+
             </div>
         </div>
     );
