@@ -1,13 +1,32 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Header = () => {
+
+  const {user, logOut} = useContext(AuthContext);
+
+  const handleLogOut = () => {
+      logOut()
+      .then(() => {
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "User logout successfully!",
+          showConfirmButton: false,
+          timer: 1500
+        });
+      })
+      .catch(error => console.log(error));
+  }
 
   const navOptions = <>
          
         <li> <Link to="/" activeClassName="active-link">Home</Link> </li>
         <li> <Link to="/collections" activeClassName="active-link">Collections</Link> </li>
         <li> <Link to="/about" activeClassName="active-link">About Us</Link> </li>
+        <li>{user?.email}</li>
 </>
 
 
@@ -33,8 +52,13 @@ const Header = () => {
               </div>
               {/* login and singup */}
               <div className="navbar-end flex gap-2">
-                <Link to="/login" className="btn">Login</Link> 
-                <Link to="/signup" className="btn">SignUp</Link>
+                {
+                  user ?
+                  <><button onClick={handleLogOut} className="btn">LogOut</button></>
+                   :
+                  <><Link to="/login" className="btn">Login</Link></>
+                }
+                {/* <Link to="/signup" className="btn">SignUp</Link> */}
               </div>
 
             </div>
