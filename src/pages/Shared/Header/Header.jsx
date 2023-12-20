@@ -27,6 +27,7 @@ const Header = () => {
         <li> <Link to="/collections" activeClassName="active-link">Collections</Link> </li>
         <li> <Link to="/about" activeClassName="active-link">About</Link> </li>
         <li>{ user?.displayName}</li>
+         
         
 </>
 
@@ -55,7 +56,11 @@ const Header = () => {
               <div className="navbar-end flex gap-2">
                 {
                   user ?
-                  <><button onClick={handleLogOut} className="btn">LogOut</button></>
+                  <>
+                  
+                  {/* <img className='w-10 h-10' src="{user?.photoURL}" alt="" /> */}
+                  <button onClick={handleLogOut} className="btn">LogOut</button>
+                  </>
                    :
                   <><Link to="/login" className="btn">Login</Link></>
                 }

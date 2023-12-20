@@ -1,0 +1,153 @@
+[
+    {
+      "id": "001",
+      "image": "url_to_image_1.jpg",
+      "productName": "Smartphone X1",
+      "brand": "TechGuru",
+      "price": "$499.99",
+      "description": "The Smartphone X1 by TechGuru is a cutting-edge device that combines performance and style. With a powerful octa-core processor, stunning AMOLED display, and advanced camera features, it redefines the smartphone experience. Whether you're a photography enthusiast or a multitasking pro, the Smartphone X1 delivers on every front.",
+      "reviews": [4.5, 5.0, 4.8],
+      "category": "mobile"
+    },
+    {
+      "id": "002",
+      "image": "url_to_image_2.jpg",
+      "productName": "ElitePhone Z2",
+      "brand": "InnoTech",
+      "price": "$599.99",
+      "description": "Discover the future of mobile technology with the ElitePhone Z2. Its sleek design houses a powerhouse of features, including a high-resolution display, AI-powered camera, and fast-charging capabilities. Stay connected and entertained with this premium device.",
+      "reviews": [4.2, 4.7, 4.5],
+      "category": "mobile"
+    },
+    {
+      "id": "003",
+      "image": "url_to_image_3.jpg",
+      "productName": "Galaxy Pro 10",
+      "brand": "Samsung",
+      "price": "$799.99",
+      "description": "Experience the next level of innovation with the Galaxy Pro 10 from Samsung. Featuring a stunning Infinity Display, a powerful Exynos processor, and a versatile triple-camera system, this smartphone is designed for those who demand the best in performance and style.",
+      "reviews": [4.8, 4.9, 4.7],
+      "category": "mobile"
+    },
+    {
+      "id": "004",
+      "image": "url_to_image_4.jpg",
+      "productName": "Pixel XL Plus",
+      "brand": "Google",
+      "price": "$699.99",
+      "description": "Meet the Pixel XL Plus, a flagship device by Google that brings together the power of pure Android and exceptional camera capabilities. With an emphasis on AI integration and seamless user experience, this phone is perfect for tech enthusiasts and photography lovers alike.",
+      "reviews": [4.6, 4.7, 4.5],
+      "category": "mobile"
+    },
+    {
+      "id": "005",
+      "image": "url_to_image_5.jpg",
+      "productName": "OnePlus 9T",
+      "brand": "OnePlus",
+      "price": "$699.00",
+      "description": "Unleash the power of speed with the OnePlus 9T. This flagship device boasts a smooth 120Hz display, a high-performance Snapdragon processor, and a versatile camera setup. Whether you're gaming or capturing memories, the OnePlus 9T delivers a premium experience.",
+      "reviews": [4.9, 4.8, 4.7],
+      "category": "mobile"
+    },
+    {
+        "id": "101",
+        "image": "url_to_airpods_image_1.jpg",
+        "productName": "AirPods Pro",
+        "brand": "Apple",
+        "price": "$249.99",
+        "description": "Immerse yourself in an unparalleled audio experience with the AirPods Pro by Apple. These wireless earbuds feature active noise cancellation, a customizable fit, and adaptive EQ for superior sound quality. With sweat and water resistance, they are perfect for active lifestyles.",
+        "reviews": [4.7, 4.9, 4.8],
+        "category": "airpods"
+      },
+      {
+        "id": "102",
+        "image": "url_to_airpods_image_2.jpg",
+        "productName": "Galaxy Buds Live",
+        "brand": "Samsung",
+        "price": "$169.99",
+        "description": "Experience true wireless freedom with the Galaxy Buds Live from Samsung. These stylish earbuds feature a bean-shaped design, AKG-tuned sound, and active noise cancellation for an immersive listening experience. Stay connected and enjoy crystal-clear calls with these premium earbuds.",
+        "reviews": [4.5, 4.8, 4.6],
+        "category": "airpods"
+      },
+      {
+        "id": "103",
+        "image": "url_to_airpods_image_3.jpg",
+        "productName": "Sony WF-1000XM4",
+        "brand": "Sony",
+        "price": "$279.99",
+        "description": "Step into a world of audio excellence with the Sony WF-1000XM4 wireless earbuds. Featuring industry-leading noise cancellation, LDAC for high-quality audio streaming, and a comfortable ergonomic design, these earbuds are perfect for music lovers on the go.",
+        "reviews": [4.8, 4.9, 4.7],
+        "category": "airpods"
+      },
+      {
+        "id": "104",
+        "image": "url_to_airpods_image_4.jpg",
+        "productName": "Jabra Elite 75t",
+        "brand": "Jabra",
+        "price": "$149.99",
+        "description": "Enhance your listening experience with the Jabra Elite 75t wireless earbuds. With a compact design, powerful sound, and a secure fit, these earbuds are perfect for daily use. Enjoy clear calls and customizable sound profiles for a personalized audio experience.",
+        "reviews": [4.6, 4.7, 4.5],
+        "category": "airpods"
+      },
+      {
+        "id": "105",
+        "image": "url_to_airpods_image_5.jpg",
+        "productName": "Beats Powerbeats Pro",
+        "brand": "Beats by Dre",
+        "price": "$199.99",
+        "description": "Unleash your potential with the Beats Powerbeats Pro. These wireless earphones are designed for athletes, featuring adjustable, secure-fit ear hooks and sweat resistance. With powerful, balanced sound and up to 9 hours of listening time, they are your perfect workout companion.",
+        "reviews": [4.5, 4.8, 4.6],
+        "category": "airpods"
+      },
+      {
+        "id": "201",
+        "image": "url_to_watch_image_1.jpg",
+        "productName": "Apple Watch Series 7",
+        "brand": "Apple",
+        "price": "$399.99",
+        "description": "Elevate your wristwear with the Apple Watch Series 7. Featuring a larger, always-on Retina display, fast-charging, and advanced health tracking capabilities, this smartwatch is the perfect companion for an active and connected lifestyle.",
+        "reviews": [4.9, 4.8, 5.0],
+        "category": "watch"
+      },
+      {
+        "id": "202",
+        "image": "url_to_watch_image_2.jpg",
+        "productName": "Samsung Galaxy Watch 4",
+        "brand": "Samsung",
+        "price": "$349.99",
+        "description": "Experience a new era of smartwatches with the Samsung Galaxy Watch 4. This stylish device combines cutting-edge health features, a vivid AMOLED display, and seamless integration with your Galaxy ecosystem. Stay connected and in control with this powerful smartwatch.",
+        "reviews": [4.7, 4.8, 4.5],
+        "category": "watch"
+      },
+      {
+        "id": "203",
+        "image": "url_to_watch_image_3.jpg",
+        "productName": "Fitbit Sense",
+        "brand": "Fitbit",
+        "price": "$299.99",
+        "description": "Prioritize your well-being with the Fitbit Sense smartwatch. This advanced health tracker monitors stress, heart health, and sleep patterns, providing valuable insights to help you lead a healthier lifestyle. With a sleek design and long battery life, it's the perfect daily companion.",
+        "reviews": [4.6, 4.9, 4.7],
+        "category": "watch"
+      },
+      {
+        "id": "204",
+        "image": "url_to_watch_image_4.jpg",
+        "productName": "Garmin Venu 2",
+        "brand": "Garmin",
+        "price": "$399.99",
+        "description": "Conquer your fitness goals with the Garmin Venu 2 smartwatch. Equipped with advanced health tracking, on-screen workouts, and a vibrant AMOLED display, this GPS smartwatch is designed for those who seek performance and style in one device.",
+        "reviews": [4.8, 4.7, 4.5],
+        "category": "watch"
+      },
+      {
+        "id": "205",
+        "image": "url_to_watch_image_5.jpg",
+        "productName": "Huawei Watch GT 3",
+        "brand": "Huawei",
+        "price": "$329.99",
+        "description": "Experience the future of smartwatches with the Huawei Watch GT 3. With a sleek design, long battery life, and advanced health monitoring, this smartwatch seamlessly blends style and functionality. Stay connected and in control with this premium wearable.",
+        "reviews": [4.5, 4.8, 4.6],
+        "category": "watch"
+      }
+   
+  ]

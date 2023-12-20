@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import SocialsLogin from '../../components/SocialsLogin/SocialsLogin';
 
 const SignUp = () => {
 
@@ -90,6 +91,7 @@ const SignUp = () => {
                  {/* form end */}
                  <p className='px-3'><small>Already have Account? <Link to='/login' className='text-warning'>Login</Link> </small></p>
                  {/* Social login will be render here soon */}
+                 <SocialsLogin></SocialsLogin>
                 </div>
 
             </div>
