@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import './Products.css'
 import useProducts from '../../../hooks/useProducts';
+import Button from '../../../components/Button/Button';
 
 const Produtcs = () => {
 
@@ -13,9 +14,9 @@ const Produtcs = () => {
     const mobiles = products.filter(product => product.category === "mobile");
     console.log("Category Mobile", mobiles)
     const airpods = products.filter(product => product.category === "airpods");
-    console.log("Category airpods", airpods)
+    // console.log("Category airpods", airpods)
     const watches = products.filter(product => product.category === "watch");
-    console.log("Category Watch", watches)
+    // console.log("Category Watch", watches)
  
 
 
@@ -25,117 +26,140 @@ const Produtcs = () => {
     return (
 
         <>
-        <div className='my-20 grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
-            {/* products */}
-            <div className="card bg-base-100 shadow-xl">
-            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">
-                Shoes!
-                <div className="badge badge-secondary">NEW</div>
-                </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                <div className="badge badge-outline">Fashion</div> 
-                <div className="badge badge-outline">Products</div>
-                </div>
-            </div>
-            </div>
-        {/* products */}
-        {/* products */}
-        <div className="card bg-base-100 shadow-xl">
-            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">
-                Shoes!
-                <div className="badge badge-secondary">NEW</div>
-                </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                <div className="badge badge-outline">Fashion</div> 
-                <div className="badge badge-outline">Products</div>
-                </div>
-            </div>
-            </div>
-        {/* products */}
-        {/* products */}
-        <div className="card bg-base-100 shadow-xl">
-            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">
-                Shoes!
-                <div className="badge badge-secondary">NEW</div>
-                </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                <div className="badge badge-outline">Fashion</div> 
-                <div className="badge badge-outline">Products</div>
-                </div>
-            </div>
-            </div>
-        {/* products */}
-        {/* products */}
-        <div className="card bg-base-100 shadow-xl">
-            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">
-                Shoes!
-                <div className="badge badge-secondary">NEW</div>
-                </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                <div className="badge badge-outline">Fashion</div> 
-                <div className="badge badge-outline">Products</div>
-                </div>
-            </div>
-            </div>
-        {/* products */}
-        {/* products */}
-        <div className="card bg-base-100 shadow-xl">
-            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">
-                Shoes!
-                <div className="badge badge-secondary">NEW</div>
-                </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                <div className="badge badge-outline">Fashion</div> 
-                <div className="badge badge-outline">Products</div>
-                </div>
-            </div>
-            </div>
-        {/* products */}
-        {/* products */}
-        <div className="card bg-base-100 shadow-xl">
-            <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-            <div className="card-body">
-                <h2 className="card-title">
-                Shoes!
-                <div className="badge badge-secondary">NEW</div>
-                </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                <div className="badge badge-outline">Fashion</div> 
-                <div className="badge badge-outline">Products</div>
-                </div>
-            </div>
-            </div>
-        {/* products */}
-
-        
-        </div>
-
-
         {/* tabs */}
 
+        <h2 className='text-6xl text-center font-bold my-10'>Explore</h2>
+
         <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+
         <TabList>
-            <Tab>Title 1</Tab>
-            <Tab>Title 2</Tab>
+            <Tab>Mobiles</Tab>
+            <Tab>Headphones</Tab>
+            <Tab>Watches</Tab>
         </TabList>
-            <TabPanel>content 1</TabPanel>
-            <TabPanel>content 2</TabPanel>
+
+        {/* categories */}
+
+        {/* mobile */}
+            <TabPanel>
+            <div className='my-20 grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+                {
+                    mobiles.map(mobile => 
+                       
+                        <div className=" bg-[#edecec]">
+                           <figure>
+                                <a href="/product-details">
+                                    <img src="https://www.excelestore.com.bd/public/uploads/all/OGOfngE63ZsS94iVCw6BeWA3ERNAUO8fdIQ6RwK9.png" alt="Shoes" />
+                                </a>
+                            </figure>
+
+                            
+                            <div className="card-body">
+                                <h2 className="card-title">
+                                {mobile.productName}
+                                <div className="badge badge-secondary">NEW</div>
+                                </h2>
+                                <p>{mobile.brand}</p>
+                                <div className="card-actions justify-end">
+                                <div className="">
+                                    <span>Price:</span> <del>{mobile.price}</del>
+                                </div> 
+                                <div className="">
+                                    <p>{mobile.price}</p>
+                                </div>
+                                </div>
+                                <div className='flex justify-between'>
+                                    <Button buttonText="Add to Cart"></Button>
+                                     <button>See More</button>
+                                </div>
+                            </div>
+                            </div>
+                    )
+                }
+                     
+            </div>
+            </TabPanel>
+
+            {/* headphones */}
+            <TabPanel>
+            <div className='my-20 grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+                {
+                    airpods.map(airpod => 
+                       
+                        <div className=" bg-[#edecec]">
+                           <figure>
+                                <a href="/product-details">
+                                    <img src="https://www.custommacbd.com/cdn/shop/products/MV7N2_AV1.jpeg?v=1613634469" alt="Shoes" />
+                                </a>
+                            </figure>
+
+                            
+                            <div className="card-body">
+                                <h2 className="card-title">
+                                {airpod.productName}
+                                <div className="badge badge-secondary">NEW</div>
+                                </h2>
+                                <p>{airpod.brand}</p>
+                                <div className="card-actions justify-end">
+                                <div className="">
+                                    <span>Price:</span> <del>{airpod.price}</del>
+                                </div> 
+                                <div className="">
+                                    <p>{airpod.price}</p>
+                                </div>
+                                </div>
+                                <div className='flex justify-between'>
+                                    <Button buttonText="Add to Cart"></Button>
+                                     <button>See More</button>
+                                </div>
+                            </div>
+                            </div>
+                    )
+                }
+                     
+            </div>
+            </TabPanel>
+
+            {/* watch */}
+            <TabPanel>
+            <div className='my-20 grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+                {
+                    watches.map(watch => 
+                       
+                        <div className=" bg-[#edecec]">
+                           <figure>
+                                <a href="/product-details">
+                                    <img src="https://m.media-amazon.com/images/I/61keHlij6dL.jpg" alt="Shoes" />
+                                </a>
+                            </figure>
+
+                            
+                            <div className="card-body">
+                                <h2 className="card-title">
+                                {watch.productName}
+                                <div className="badge badge-secondary">NEW</div>
+                                </h2>
+                                <p>{watch.brand}</p>
+                                <div className="card-actions justify-end">
+                                <div className="">
+                                    <span>Price:</span> <del>{watch.price}</del>
+                                </div> 
+                                <div className="">
+                                    <p>{watch.price}</p>
+                                </div>
+                                </div>
+                                <div className='flex justify-between'>
+                                    <Button buttonText="Add to Cart"></Button>
+                                     <button>See More</button>
+                                </div>
+                            </div>
+                            </div>
+                    )
+                }
+                     
+            </div>
+            </TabPanel>
+            
         </Tabs>
 
 
