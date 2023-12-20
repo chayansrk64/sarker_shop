@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2';
+import SocialsLogin from '../../components/SocialsLogin/SocialsLogin';
 
 const Login = () => {
 
@@ -82,6 +83,7 @@ const Login = () => {
               {/* form end */}
               <p className='px-3'><small>New here? <Link to='/signup' className='text-warning'>Create an Account</Link> </small></p>
               {/* Social login will be render here soon */}
+              <SocialsLogin></SocialsLogin>
              </div>
 
          </div>
