@@ -30,7 +30,7 @@ const Reviews = () => {
        
         <Swiper
         onSwiper={setSwiperRef}
-        slidesPerView={3}
+        
         centeredSlides={true}
         spaceBetween={30}
         pagination={{
@@ -39,6 +39,20 @@ const Reviews = () => {
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
+        breakpoints={{
+            0: {
+                slidesPerView: 1,
+              },
+              640: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+          }}
       >
         <SwiperSlide>
             <div className='h-[400px]'>
