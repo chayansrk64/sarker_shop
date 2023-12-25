@@ -1,5 +1,5 @@
 
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaStar } from "react-icons/fa";
@@ -18,6 +18,16 @@ import { Pagination, Navigation } from 'swiper/modules';
 const Reviews = () => {
 
     const [swiperRef, setSwiperRef] = useState(null);
+
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/reviews')
+        .then(res => res.json())
+        .then(data => {
+            setReviews(data)
+        })
+    },[])
 
     
    
@@ -54,82 +64,25 @@ const Reviews = () => {
               },
           }}
       >
-        <SwiperSlide>
+       {reviews.map(review =>  <SwiperSlide key={review.id}>
             <div className='h-[400px]'>
                 <div className='h-20 w-20 m-auto my-6'>
-                    <img className='rounded-full ' src="https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/IQ-Accountants-managing-partner-Kyelie-Baxter-Slack-customer-story.jpg" alt="" />
+                    <img className='rounded-full ' src={review.client_photo_url} alt="" />
                 </div>
                 <div className='text-center p-6'>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam pariatur accusantium provident neque eligendi, odit excepturi velit corrupti similique harum.</p>
-                    <p className='py-3 font-bold'>client name</p>
+                    <p className='py-3 font-bold'>{review.client_name}</p>
                     <div className='flex justify-center'>
                     <p><FaStar></FaStar></p>
                     <p><FaStar></FaStar></p>
                     <p><FaStar></FaStar></p>
                     <p><FaStar></FaStar></p>
                     <p><FaStar></FaStar></p>
-                    </div>
-                     
+                    </div>  
                 </div>
             </div>
-         </SwiperSlide>
-        <SwiperSlide>
-            <div className='h-[400px]'>
-                <div className='h-20 w-20 m-auto my-6'>
-                    <img className='rounded-full ' src="https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/IQ-Accountants-managing-partner-Kyelie-Baxter-Slack-customer-story.jpg" alt="" />
-                </div>
-                <div className='text-center p-6'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam pariatur accusantium provident neque eligendi, odit excepturi velit corrupti similique harum.</p>
-                    <p className='py-3 font-bold'>client name</p>
-                    <div className='flex justify-center'>
-                    <p><FaStar></FaStar></p>
-                    <p><FaStar></FaStar></p>
-                    <p><FaStar></FaStar></p>
-                    <p><FaStar></FaStar></p>
-                    <p><FaStar></FaStar></p>
-                    </div>
-                     
-                </div>
-            </div>
-         </SwiperSlide>
-        <SwiperSlide>
-            <div className='h-[400px]'>
-                <div className='h-20 w-20 m-auto my-6'>
-                    <img className='rounded-full ' src="https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/IQ-Accountants-managing-partner-Kyelie-Baxter-Slack-customer-story.jpg" alt="" />
-                </div>
-                <div className='text-center p-6'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam pariatur accusantium provident neque eligendi, odit excepturi velit corrupti similique harum.</p>
-                    <p className='py-3 font-bold'>client name</p>
-                    <div className='flex justify-center'>
-                    <p><FaStar></FaStar></p>
-                    <p><FaStar></FaStar></p>
-                    <p><FaStar></FaStar></p>
-                    <p><FaStar></FaStar></p>
-                    <p><FaStar></FaStar></p>
-                    </div>
-                     
-                </div>
-            </div>
-         </SwiperSlide>
-        <SwiperSlide>
-            <div className='h-[400px]'>
-                <div className='h-20 w-20 m-auto my-6'>
-                    <img className='rounded-full ' src="https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/IQ-Accountants-managing-partner-Kyelie-Baxter-Slack-customer-story.jpg" alt="" />
-                </div>
-                <div className='text-center p-6'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam pariatur accusantium provident neque eligendi, odit excepturi velit corrupti similique harum.</p>
-                    <p className='py-3 font-bold'>client name</p>
-                    <div className='flex justify-center'>
-                    <p><FaStar></FaStar></p>
-                    <p><FaStar></FaStar></p>
-                    <p><FaStar></FaStar></p>
-                    <p><FaStar></FaStar></p>
-                    <p><FaStar></FaStar></p>
-                    </div>
-                     
-                </div>
-            </div>
-         </SwiperSlide>
+         </SwiperSlide>)}
+        
         
         
         

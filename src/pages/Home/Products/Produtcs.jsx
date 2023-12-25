@@ -12,7 +12,7 @@ const Produtcs = () => {
 
 
     const mobiles = products.filter(product => product.category === "mobile");
-    console.log("Category Mobile", mobiles)
+    // console.log("Category Mobile", mobiles)
     const airpods = products.filter(product => product.category === "airpods");
     // console.log("Category airpods", airpods)
     const watches = products.filter(product => product.category === "watch");
@@ -46,7 +46,7 @@ const Produtcs = () => {
                 {
                     mobiles.map(mobile => 
                        
-                        <div className=" bg-[#edecec]">
+                        <div key={mobile.id} className=" bg-[#edecec]">
                            <figure>
                                 <a href="/product-details">
                                     <img src="https://www.excelestore.com.bd/public/uploads/all/OGOfngE63ZsS94iVCw6BeWA3ERNAUO8fdIQ6RwK9.png" alt="Shoes" />
@@ -86,7 +86,7 @@ const Produtcs = () => {
                 {
                     airpods.map(airpod => 
                        
-                        <div className=" bg-[#edecec]">
+                        <div key={airpod.id} className=" bg-[#edecec]">
                            <figure>
                                 <a href="/product-details">
                                     <img src="https://www.custommacbd.com/cdn/shop/products/MV7N2_AV1.jpeg?v=1613634469" alt="Shoes" />
@@ -126,7 +126,7 @@ const Produtcs = () => {
                 {
                     watches.map(watch => 
                        
-                        <div className=" bg-[#edecec]">
+                        <div key={watch.id} className=" bg-[#edecec]">
                            <figure>
                                 <a href="/product-details">
                                     <img src="https://m.media-amazon.com/images/I/61keHlij6dL.jpg" alt="Shoes" />
@@ -164,7 +164,6 @@ const Produtcs = () => {
 
 
       
-
 
         </>
     );

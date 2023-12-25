@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "client_photo_url": "https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/IQ-Accountants-managing-partner-Kyelie-Baxter-Slack-customer-story.jpg",
+    "client_name": "John Doe",
+    "review": "Great experience with excellent service! The staff was friendly and helpful. Will definitely come back.",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "client_photo_url": "https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/IQ-Accountants-managing-partner-Kyelie-Baxter-Slack-customer-story.jpg",
+    "client_name": "Jane Smith",
+    "review": "Fantastic product quality and fast delivery. I highly recommend this company.",
+    "rating": 4.5
+  },
+  {
+    "id": 3,
+    "client_photo_url": "https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/IQ-Accountants-managing-partner-Kyelie-Baxter-Slack-customer-story.jpg",
+    "client_name": "Mike Johnson",
+    "review": "The customer support was outstanding. They went above and beyond to solve my issue. Very impressed!",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "client_photo_url": "https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/IQ-Accountants-managing-partner-Kyelie-Baxter-Slack-customer-story.jpg",
+    "client_name": "Sara Davis",
+    "review": "Good value for money. The product exceeded my expectations. Will recommend to friends and family.",
+    "rating": 4
+  },
+  {
+    "id": 5,
+    "client_photo_url": "https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/IQ-Accountants-managing-partner-Kyelie-Baxter-Slack-customer-story.jpg",
+    "client_name": "Alex Rodriguez",
+    "review": "Prompt service and high-quality products. I've been a loyal customer for years and have never been disappointed.",
+    "rating": 4.8
+  }
+]

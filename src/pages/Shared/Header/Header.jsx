@@ -23,9 +23,10 @@ const Header = () => {
 
   const navOptions = <>
          
-        <li> <Link to="/" activeClassName="active-link">Home</Link> </li>
-        <li> <Link to="/collections" activeClassName="active-link">Collections</Link> </li>
-        <li> <Link to="/about" activeClassName="active-link">About</Link> </li>
+        <li> <Link to="/" >Home</Link> </li>
+        {/* activeClassName="active-link" */}
+        <li> <Link to="/collections">Collections</Link> </li>
+        <li> <Link to="/about" >About</Link> </li>
         <li>{ user?.displayName}</li>
          
         
