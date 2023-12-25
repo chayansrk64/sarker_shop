@@ -1,15 +1,17 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import SocialsLogin from '../../components/SocialsLogin/SocialsLogin';
+import Swal from 'sweetalert2';
 
 const SignUp = () => {
 
-    const {createUser} = useContext(AuthContext);
+    const {createUser, updateUserProfile} = useContext(AuthContext);
+    let navigate = useNavigate();
 
     const {
-            register, handleSubmit, watch, refetch, formState: { errors },
+            register, handleSubmit, watch, reset, formState: { errors },
         } = useForm();
 
     const onSubmit = (data) => {
@@ -18,6 +20,21 @@ const SignUp = () => {
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);
+            updateUserProfile(data.name, data.photoURL)
+            .then(() => {
+                Swal.fire({
+                    position: "top-center",
+                    icon: "success",
+                    title: "User Updated Successfully!",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+                  reset();
+                  navigate("/");
+            })
+            .catch(error => {
+                console.log(error)
+            })
         })
 
     }
