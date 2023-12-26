@@ -1,7 +1,7 @@
 [
     {
       "id": "001",
-      "image": "url_to_image_1.jpg",
+      "image": "https://www.excelestore.com.bd/public/uploads/all/OGOfngE63ZsS94iVCw6BeWA3ERNAUO8fdIQ6RwK9.png",
       "productName": "Smartphone X1",
       "brand": "TechGuru",
       "price": "$499.99",
@@ -11,7 +11,7 @@
     },
     {
       "id": "002",
-      "image": "url_to_image_2.jpg",
+      "image": "https://www.excelestore.com.bd/public/uploads/all/OGOfngE63ZsS94iVCw6BeWA3ERNAUO8fdIQ6RwK9.png",
       "productName": "ElitePhone Z2",
       "brand": "InnoTech",
       "price": "$599.99",
@@ -21,7 +21,7 @@
     },
     {
       "id": "003",
-      "image": "url_to_image_3.jpg",
+      "image": "https://www.excelestore.com.bd/public/uploads/all/OGOfngE63ZsS94iVCw6BeWA3ERNAUO8fdIQ6RwK9.png",
       "productName": "Galaxy Pro 10",
       "brand": "Samsung",
       "price": "$799.99",
@@ -31,7 +31,7 @@
     },
     {
       "id": "004",
-      "image": "url_to_image_4.jpg",
+      "image": "https://www.excelestore.com.bd/public/uploads/all/OGOfngE63ZsS94iVCw6BeWA3ERNAUO8fdIQ6RwK9.png",
       "productName": "Pixel XL Plus",
       "brand": "Google",
       "price": "$699.99",
@@ -41,7 +41,7 @@
     },
     {
       "id": "005",
-      "image": "url_to_image_5.jpg",
+      "image": "https://www.excelestore.com.bd/public/uploads/all/OGOfngE63ZsS94iVCw6BeWA3ERNAUO8fdIQ6RwK9.png",
       "productName": "OnePlus 9T",
       "brand": "OnePlus",
       "price": "$699.00",
@@ -51,7 +51,7 @@
     },
     {
         "id": "101",
-        "image": "url_to_airpods_image_1.jpg",
+        "image": "https://www.custommacbd.com/cdn/shop/products/MV7N2_AV1.jpeg?v=1613634469",
         "productName": "AirPods Pro",
         "brand": "Apple",
         "price": "$249.99",
@@ -61,7 +61,7 @@
       },
       {
         "id": "102",
-        "image": "url_to_airpods_image_2.jpg",
+        "image": "https://www.custommacbd.com/cdn/shop/products/MV7N2_AV1.jpeg?v=1613634469",
         "productName": "Galaxy Buds Live",
         "brand": "Samsung",
         "price": "$169.99",
@@ -71,7 +71,7 @@
       },
       {
         "id": "103",
-        "image": "url_to_airpods_image_3.jpg",
+        "image": "https://www.custommacbd.com/cdn/shop/products/MV7N2_AV1.jpeg?v=1613634469",
         "productName": "Sony WF-1000XM4",
         "brand": "Sony",
         "price": "$279.99",
@@ -81,7 +81,7 @@
       },
       {
         "id": "104",
-        "image": "url_to_airpods_image_4.jpg",
+        "image": "https://www.custommacbd.com/cdn/shop/products/MV7N2_AV1.jpeg?v=1613634469",
         "productName": "Jabra Elite 75t",
         "brand": "Jabra",
         "price": "$149.99",
@@ -91,7 +91,7 @@
       },
       {
         "id": "105",
-        "image": "url_to_airpods_image_5.jpg",
+        "image": "https://www.custommacbd.com/cdn/shop/products/MV7N2_AV1.jpeg?v=1613634469",
         "productName": "Beats Powerbeats Pro",
         "brand": "Beats by Dre",
         "price": "$199.99",
@@ -101,7 +101,7 @@
       },
       {
         "id": "201",
-        "image": "url_to_watch_image_1.jpg",
+        "image": "https://m.media-amazon.com/images/I/61keHlij6dL.jpg",
         "productName": "Apple Watch Series 7",
         "brand": "Apple",
         "price": "$399.99",
@@ -111,7 +111,7 @@
       },
       {
         "id": "202",
-        "image": "url_to_watch_image_2.jpg",
+        "image": "https://m.media-amazon.com/images/I/61keHlij6dL.jpg",
         "productName": "Samsung Galaxy Watch 4",
         "brand": "Samsung",
         "price": "$349.99",
@@ -121,7 +121,7 @@
       },
       {
         "id": "203",
-        "image": "url_to_watch_image_3.jpg",
+        "image": "https://m.media-amazon.com/images/I/61keHlij6dL.jpg",
         "productName": "Fitbit Sense",
         "brand": "Fitbit",
         "price": "$299.99",
@@ -131,7 +131,7 @@
       },
       {
         "id": "204",
-        "image": "url_to_watch_image_4.jpg",
+        "image": "https://m.media-amazon.com/images/I/61keHlij6dL.jpg",
         "productName": "Garmin Venu 2",
         "brand": "Garmin",
         "price": "$399.99",
@@ -141,7 +141,7 @@
       },
       {
         "id": "205",
-        "image": "url_to_watch_image_5.jpg",
+        "image": "https://m.media-amazon.com/images/I/61keHlij6dL.jpg",
         "productName": "Huawei Watch GT 3",
         "brand": "Huawei",
         "price": "$329.99",

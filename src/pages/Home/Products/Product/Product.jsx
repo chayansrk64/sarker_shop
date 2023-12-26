@@ -1,24 +1,24 @@
 
 import { useContext } from 'react';
-import Button from '../../../components/Button/Button';
-import { AuthContext } from '../../../providers/AuthProvider';
+import Button from '../../../../components/Button/Button';
+import { AuthContext } from '../../../../providers/AuthProvider';
 import Swal from 'sweetalert2';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const Mobiles = ({mobile}) => {
+const Product = ({product}) => {
 
-    const {id, productName,brand,price,} = mobile;
+    const {id, productName, brand, price, image} = product;
     // console.log(mobile);
     
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
-    const handleAddToCart = (mobile) => {
-        console.log(mobile);
+    const handleAddToCart = (product) => {
+        console.log(product);
        
         if(user && user.email){
-            const cartItem = {mobileId: id, productName, brand, price, email: user.email };
+            const cartItem = {productId: id, productName, brand, price, email: user.email };
             fetch('http://localhost:5000/carts', {
                 method: "POST",
                 headers: {
@@ -59,7 +59,7 @@ const Mobiles = ({mobile}) => {
         <div className=" bg-[#edecec]">
         <figure>
              <a href="/product-details">
-                 <img src="https://www.excelestore.com.bd/public/uploads/all/OGOfngE63ZsS94iVCw6BeWA3ERNAUO8fdIQ6RwK9.png" alt="Shoes" />
+                 <img src={image} alt="Image" />
              </a>
          </figure>
 
@@ -79,7 +79,7 @@ const Mobiles = ({mobile}) => {
              </div>
              </div>
              <div className='flex justify-between'>
-                 <Button onClick={() => handleAddToCart(mobile)} buttonText="Add To Cart"></Button>
+                 <Button onClick={() => handleAddToCart(product)} buttonText="Add To Cart"></Button>
                   <button>See More</button>
              </div>
          </div>
@@ -87,4 +87,4 @@ const Mobiles = ({mobile}) => {
     );
 };
 
-export default Mobiles;
+export default Product;
