@@ -4,6 +4,7 @@ import 'react-tabs/style/react-tabs.css';
 import './Products.css'
 import useProducts from '../../../hooks/useProducts';
 import Button from '../../../components/Button/Button';
+import Mobiles from './Mobiles';
 
 const Produtcs = () => {
 
@@ -43,7 +44,7 @@ const Produtcs = () => {
         {/* mobile */}
             <TabPanel>
             <div className='my-20 grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
-                {
+                {/* {
                     mobiles.map(mobile => 
                        
                         <div key={mobile.id} className=" bg-[#edecec]">
@@ -75,7 +76,16 @@ const Produtcs = () => {
                             </div>
                             </div>
                     )
+                } */}
+
+
+
+                {
+                    mobiles.map(mobile => 
+                        <Mobiles key={mobile.id} mobile={mobile}></Mobiles>
+                    )
                 }
+                
                      
             </div>
             </TabPanel>
