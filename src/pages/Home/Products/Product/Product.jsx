@@ -4,6 +4,7 @@ import Button from '../../../../components/Button/Button';
 import { AuthContext } from '../../../../providers/AuthProvider';
 import Swal from 'sweetalert2';
 import { useLocation, useNavigate } from 'react-router-dom';
+import useCart from '../../../../hooks/useCart';
 
 const Product = ({product}) => {
 
@@ -13,6 +14,7 @@ const Product = ({product}) => {
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+    const [, , refetch] = useCart();
 
     const handleAddToCart = (product) => {
         console.log(product);
@@ -29,6 +31,7 @@ const Product = ({product}) => {
             .then(res => res.json())
             .then(data => {
                 if(data.insertedId){
+                    refetch(); // to update the cart product count;
                     Swal.fire({
                         position: "top-center",
                         icon: "success",

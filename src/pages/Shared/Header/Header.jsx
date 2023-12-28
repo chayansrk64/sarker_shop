@@ -2,10 +2,13 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import Swal from 'sweetalert2';
+import { FaShoppingCart } from "react-icons/fa";
+import useCart from '../../../hooks/useCart';
 
 const Header = () => {
 
   const {user, logOut} = useContext(AuthContext);
+  const [cart] = useCart();
 
   const handleLogOut = () => {
       logOut()
@@ -27,7 +30,15 @@ const Header = () => {
         {/* activeClassName="active-link" */}
         <li> <Link to="/collections">Collections</Link> </li>
         <li> <Link to="/about" >About</Link> </li>
-        <li>{ user?.displayName}</li>
+        {/* <li>{ user?.displayName}</li> */}
+        <li>
+          <Link to="/cart" >
+            <button className="flex text-xl">
+                  <FaShoppingCart />
+                  <div className="badge badge-warning">+{cart?.length || 0}</div>
+            </button>
+          </Link>
+        </li>
          
         
 </>
