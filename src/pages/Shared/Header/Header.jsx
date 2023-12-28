@@ -32,7 +32,7 @@ const Header = () => {
         <li> <Link to="/about" >About</Link> </li>
         {/* <li>{ user?.displayName}</li> */}
         <li>
-          <Link to="/cart" >
+          <Link to="/dashboard/mycart" >
             <button className="flex text-xl">
                   <FaShoppingCart />
                   <div className="badge badge-warning">+{cart?.length || 0}</div>

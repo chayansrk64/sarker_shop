@@ -12,7 +12,7 @@ const useCart = () => {
         queryKey: ['carts', user?.email],
         queryFn: async () => {
             const res = await fetch(`http://localhost:5000/carts?email=${user?.email}`)
-            console.log("res from useCart", res);
+            // console.log("res from useCart", res);
             return res.json();
         }
       })
