@@ -16,16 +16,20 @@ const SocialsLogin = () => {
         googleSignIn()
         .then(result => {
             const loggedUser = result.user;
-            Swal.fire({
-                position: "top-center",
-                icon: "success",
-                title: "Login Successfull!",
-                showConfirmButton: false,
-                timer: 1500
-              });
-            console.log(loggedUser);
+            
+            const savedUser = { name: loggedUser.displayName, email: loggedUser.email }
 
-            navigate(from, {replace: true});
+                fetch('http://localhost:5000/users', {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(savedUser)
+                })
+                .then(res => res.json())
+                .then(() => {
+                  navigate(from, {replace: true});
+                })
         })
     }
 
