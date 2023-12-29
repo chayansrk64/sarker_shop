@@ -14,13 +14,13 @@ const Product = ({product}) => {
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-    const [, , refetch] = useCart();
+    const [, refetch] = useCart();
 
     const handleAddToCart = (product) => {
         console.log(product);
        
         if(user && user.email){
-            const cartItem = {productId: id, productName, brand, price, email: user.email };
+            const cartItem = {productId: id, image, productName, brand, price, email: user.email };
             fetch('http://localhost:5000/carts', {
                 method: "POST",
                 headers: {

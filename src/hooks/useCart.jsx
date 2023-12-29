@@ -17,7 +17,7 @@ const useCart = () => {
         }
       })
 
-      return [ cart, isPending, refetch ]
+      return [ cart, refetch, isPending ]
     
 };
 
