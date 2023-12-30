@@ -49,8 +49,8 @@ const Dashboard = () => {
                 <li><NavLink to="/dashboard/payment"><FaMoneyCheckDollar />Payment History</NavLink></li>
                 <li>
                     <NavLink to="/dashboard/mycart">
-                        My Cart
                         <FaShoppingCart />
+                        My Cart
                     <span className="badge badge-warning text-gray font-semibold">+{cart?.length || 0}</span>
                     </NavLink></li>
                 <li><NavLink to="/dashboard/review"><FaAddressBook />Add Review</NavLink></li>
