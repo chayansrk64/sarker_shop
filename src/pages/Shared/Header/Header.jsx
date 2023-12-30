@@ -4,8 +4,8 @@ import { AuthContext } from '../../../providers/AuthProvider';
 import Swal from 'sweetalert2';
 import { FaShoppingCart } from "react-icons/fa";
 import useCart from '../../../hooks/useCart';
-import { FiLogOut } from "react-icons/fi";
-import { FiLogIn } from "react-icons/fi";
+import { HiLogout } from "react-icons/hi";
+import { HiLogin } from "react-icons/hi";
 
 const Header = () => {
 
@@ -72,13 +72,13 @@ const Header = () => {
                   user ?
                   <>
                   <img className='w-10 rounded-full' src={user?.photoURL} alt="" />
-                  <button onClick={handleLogOut} className="p-2 text-2xl">
-                    <FiLogOut />
+                  <button title='LogOut' onClick={handleLogOut} className="p-2 text-2xl">
+                  <HiLogout />
                   </button>
                   </>
                    :
-                  <><Link to="/login" className="p-2 text-2xl">
-                    <FiLogIn/>
+                  <><Link title='LogIn' to="/login" className="p-2 text-2xl">
+                   <HiLogin />
                   </Link></>
                 }
                 {/* <Link to="/signup" className="btn">SignUp</Link> */}

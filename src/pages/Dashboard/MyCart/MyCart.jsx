@@ -8,7 +8,7 @@ const MyCart = () => {
     const [cart, refetch] = useCart();
     // console.log(cart);
     const totalPrice = [];
-    cart.map(item => {
+    cart?.map(item => {
         const [currency, money] = item.price.split('$'); // TODO: have to chage the dababase price into only number
         const price = parseFloat(money);
         totalPrice.push(price);
@@ -71,7 +71,7 @@ const MyCart = () => {
                 <tbody>
                 {/* row 1 */}
                 {
-                    cart.map((item, index) => <tr key={item._id}>
+                    cart?.map((item, index) => <tr key={item._id}>
                         <td>
                          {index + 1}
                         </td>
