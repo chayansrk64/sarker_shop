@@ -17,7 +17,7 @@ const Product = ({product}) => {
     const [, refetch] = useCart();
 
     const handleAddToCart = (product) => {
-        console.log(product);
+        // console.log(product);
        
         if(user && user.email){
             const cartItem = {productId: id, image, productName, brand, price, email: user.email };
