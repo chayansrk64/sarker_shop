@@ -1,18 +1,50 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
 
 const AddItem = () => {
+
+    const {
+        register,
+        handleSubmit,
+        watch,
+        formState: { errors },
+      } = useForm()
+    
+      const onSubmit = (data) => {
+           
+            // const imageURL = data.image[0].name;
+            console.log(data)
+            fetch('http://localhost:5000/products', {
+                method: "POST",
+                headers: {
+                    "content-type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(res => res.json())
+            .then(result => {
+                if(result.insertedId){
+                    alert('product inserted')
+                }
+            })
+      }
+    
+      console.log(watch("example")) 
+
+
     return (
         <div className='w-full'>
             <h2 className='text-center text-4xl'>Add an Item</h2>
 {/* form div */}
         <div className='mx-10'>
-            <form action="" className='grid grid-cols-1 md:grid-cols-2 gap-x-20'>
+            <form onSubmit={handleSubmit(onSubmit)} className='grid grid-cols-1 md:grid-cols-2 gap-x-20'>
                 <div>
                     <label className="form-control">
                     <div className="label">
                         <span className="label-text">Product Image</span>
                     </div>
-                    <input type="file" className="file-input file-input-bordered " />
+                    <input type="file" {...register("image", { required: true })} className="file-input file-input-bordered " />
+                    {errors.image && <span>Image is required</span>}
                     </label>
                 </div>
                 <div>
@@ -20,7 +52,7 @@ const AddItem = () => {
                     <div className="label">
                         <span className="label-text">Product Name</span>
                     </div>
-                    <input type="text" placeholder="Type here" className="input input-bordered  " />
+                    <input type="text" {...register("productName", { required: true })} placeholder="Type here" className="input input-bordered  " />
                     </label>
                 </div>
 
@@ -30,7 +62,7 @@ const AddItem = () => {
                         <span className="label-text">Product Brand</span>
                         
                     </div>
-                    <select className="select select-bordered">
+                    <select  {...register("brand", { required: true })}  className="select select-bordered">
                         <option disabled selected>Pick one</option>
                         <option>Samgsung</option>
                         <option>Oppo</option>
@@ -50,11 +82,11 @@ const AddItem = () => {
                         <span className="label-text">Product Category</span>
                         
                     </div>
-                    <select className="select select-bordered">
+                    <select  {...register("category", { required: true })}  className="select select-bordered">
                         <option disabled selected>Pick one</option>
-                        <option>Mobile</option>
-                        <option>Watch</option>
-                        <option>Airpods</option>
+                        <option>mobile</option>
+                        <option>watch</option>
+                        <option>airpods</option>
                          
                     </select>
                      
@@ -65,7 +97,7 @@ const AddItem = () => {
                     <div className="label">
                         <span className="label-text">Product Price</span>
                     </div>
-                    <input type="text" placeholder="Type here" className="input input-bordered  " />
+                    <input type="number"  {...register("price", { required: true })}  placeholder="Type here" className="input input-bordered  " />
                     </label>
                 </div>
                 <div>
@@ -74,7 +106,7 @@ const AddItem = () => {
                         <span className="label-text">Product Ratings</span>
                         
                     </div>
-                    <select className="select select-bordered">
+                    <select  {...register("reviews", { required: true })}  className="select select-bordered">
                         <option disabled selected>Pick one</option>
                         <option>1</option>
                         <option>2</option>
@@ -91,7 +123,7 @@ const AddItem = () => {
                     <div className="label">
                         <span className="label-text">Product Description</span>
                     </div>
-                    <textarea className="textarea textarea-bordered h-24" placeholder="Bio"></textarea>
+                    <textarea  {...register("description", { required: true })}  className="textarea textarea-bordered h-24" placeholder="Description"></textarea>
                     </label>
                 </div>
                

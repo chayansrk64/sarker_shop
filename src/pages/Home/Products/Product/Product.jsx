@@ -59,12 +59,20 @@ const Product = ({product}) => {
     }
 
     return (
-        <div className=" bg-[#edecec]">
-        <figure>
+        <div className=" bg-[#edecec] ">
+            <div className='h-[400px]'>
+                <figure className='h-full'>
+                    <a href="/product-details">
+                        <img className='h-full w-full' src={image} alt="Image" />
+                    </a>
+                </figure>
+            </div>
+
+        {/* <figure>
              <a href="/product-details">
                  <img src={image} alt="Image" />
              </a>
-         </figure>
+         </figure> */}
 
          
          <div className="card-body">
