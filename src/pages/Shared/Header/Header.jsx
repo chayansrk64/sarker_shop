@@ -45,8 +45,7 @@ const Header = () => {
                   <div className="badge badge-warning">+{cart?.length || 0}</div>
             </button>
           </Link>
-        </li>
-         
+        </li>     
         
 </>
 

@@ -18,6 +18,7 @@ import ManageProduct from "../pages/Dashboard/Admin/ManageProduct/ManageProduct"
 import ManageOrder from "../pages/Dashboard/Admin/ManageOrder/ManageOrder";
 import Payment from "../pages/Dashboard/User/Payment/Payment";
 import AddReview from "../pages/Dashboard/User/AddReview/AddReview";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        element: <Dashboard></Dashboard>,
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children: [
             // user routes
             {
