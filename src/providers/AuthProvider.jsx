@@ -46,7 +46,7 @@ const AuthProvider = ({children}) => {
             setUser(currentUser);
             // console.log('current user', currentUser);
 
-            // get and set token
+            // get token from backend and set token
             if(currentUser){
                 axios.post('http://localhost:5000/jwt', { email: currentUser.email })
                 .then(data => {

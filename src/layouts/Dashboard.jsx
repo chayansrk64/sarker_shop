@@ -36,8 +36,8 @@ const Dashboard = () => {
                 <>
 
                 <li><NavLink to="/dashboard/adminhome"><IoHome />Admin Home</NavLink></li>
-                <li><NavLink to="/dashboard/additems"><FaUtensils />Add Items</NavLink></li>
-                <li><NavLink to="/dashboard/manageproducts"><TfiWrite />Manage Products</NavLink></li>
+                <li><NavLink to="/dashboard/additem"><FaUtensils />Add Item</NavLink></li>
+                <li><NavLink to="/dashboard/manageproduct"><TfiWrite />Manage Products</NavLink></li>
                 <li><NavLink to="/dashboard/manageorders"><FaWallet />Manage Orders</NavLink></li>
                 <li><NavLink to="/dashboard/users"><FaAddressBook />Users</NavLink></li>
 

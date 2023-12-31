@@ -3,8 +3,6 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import './Products.css'
 import useProducts from '../../../hooks/useProducts';
-import Button from '../../../components/Button/Button';
-import Mobiles from './Product/Product';
 import ProductTab from './ProductTab/ProductTab';
 
 const Produtcs = () => {

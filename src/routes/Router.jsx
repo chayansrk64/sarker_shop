@@ -4,10 +4,22 @@ import Home from "../pages/Home/Home/Home";
 import About from "../pages/About/About";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
-import PrivateRoutes from "./PrivateRoutes";
+
 import Dashboard from "../layouts/Dashboard";
-import MyCart from "../pages/Dashboard/MyCart/MyCart";
-import Users from "../pages/Dashboard/Users/Users";
+
+import Users from "../pages/Dashboard/Admin/Users/Users";
+import AddItem from "../pages/Dashboard/Admin/AddItem/AddItem";
+import AdminRoute from "./AdminRoute";
+
+import UserHome from "../pages/Dashboard/User/UserHome/UserHome";
+import AdminHome from "../pages/Dashboard/Admin/AdminHome/AdminHome";
+import MyCart from "../pages/Dashboard/User/MyCart/MyCart";
+import ManageProduct from "../pages/Dashboard/Admin/ManageProduct/ManageProduct";
+import ManageOrder from "../pages/Dashboard/Admin/ManageOrder/ManageOrder";
+import Payment from "../pages/Dashboard/User/Payment/Payment";
+import AddReview from "../pages/Dashboard/User/AddReview/AddReview";
+
+
 
 const router = createBrowserRouter([
     {
@@ -20,7 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/about",
-                element: <PrivateRoutes><About></About></PrivateRoutes>
+                element: <About></About>
             },
             {
                 path: "/login",
@@ -36,14 +48,47 @@ const router = createBrowserRouter([
         path: '/dashboard',
         element: <Dashboard></Dashboard>,
         children: [
+            // user routes
+            {
+                path: 'userhome',
+                element: <UserHome></UserHome>
+            },
+            {
+                path: 'payment',
+                element: <Payment></Payment>
+            },
             {
                 path: 'mycart',
                 element: <MyCart></MyCart>
             },
             {
+                path: 'review',
+                element: <AddReview></AddReview>
+            },
+            
+
+            //TODO: admin routes 
+            {
+                path: 'adminhome',
+                element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
+            },
+            {
+                path: 'additem',
+                element: <AdminRoute><AddItem></AddItem></AdminRoute>
+            },
+            {
+                path: 'manageproduct',
+                element: <AdminRoute><ManageProduct></ManageProduct></AdminRoute>
+            },
+            {
+                path: 'manageorders',
+                element: <AdminRoute><ManageOrder></ManageOrder></AdminRoute>
+            },
+            {
                 path: 'users',
-                element: <Users></Users>
-            }
+                element: <AdminRoute><Users></Users></AdminRoute>
+            },
+            
         ]
     }
 ])

@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { FaUser } from "react-icons/fa";
 import Swal from 'sweetalert2';
-import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import useAxiosSecure from '../../../../hooks/useAxiosSecure';
 
 
 const Users = () => {

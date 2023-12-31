@@ -6,11 +6,13 @@ import { FaShoppingCart } from "react-icons/fa";
 import useCart from '../../../hooks/useCart';
 import { HiLogout } from "react-icons/hi";
 import { HiLogin } from "react-icons/hi";
+import useAdmin from '../../../hooks/useAdmin';
 
 const Header = () => {
 
   const {user, logOut} = useContext(AuthContext);
   const [cart] = useCart();
+  const [isAdmin] = useAdmin();
 
   const handleLogOut = () => {
       logOut()
@@ -33,6 +35,9 @@ const Header = () => {
         <li> <Link to="/collections">Collections</Link> </li>
         <li> <Link to="/about" >About</Link> </li>
         <li><Link to="/profile"></Link>{user?.displayName}</li>
+
+        <li> <Link to={isAdmin ? "/dashboard/adminhome" : "/dashboard/userhome"}>Dashboard</Link> </li>
+
         <li>
           <Link to="/dashboard/mycart" >
             <button className="flex text-xl">

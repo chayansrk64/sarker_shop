@@ -1,7 +1,7 @@
 import React from 'react';
-import useCart from '../../../hooks/useCart';
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Swal from 'sweetalert2';
+import useCart from '../../../../hooks/useCart';
 
 const MyCart = () => {
 

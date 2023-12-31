@@ -6,9 +6,9 @@ import { useEffect } from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 
+// step 1: create exios instense;
 
 const axiosSecure = axios.create({
-//   baseURL: 'https://bistro-boss-server-taupe.vercel.app', 
   baseURL: 'http://localhost:5000', 
 });
 
@@ -18,12 +18,12 @@ const useAxiosSecure = () => {
   const navigate = useNavigate(); 
 
    
-
+// step 2: interceptors
   useEffect(() => {
     axiosSecure.interceptors.request.use((config) => {
       const token = localStorage.getItem('access-token');
       if (token) {
-        config.headers.Authorization = `Bearer ${token}`;
+        config.headers.Authorization = `bearer ${token}`;
       }
       return config;
     });
