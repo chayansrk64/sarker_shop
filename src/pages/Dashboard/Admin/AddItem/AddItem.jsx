@@ -10,10 +10,10 @@ const AddItem = () => {
         formState: { errors },
       } = useForm()
     
-      const onSubmit = (data) => {
-           
-            // const imageURL = data.image[0].name;
-            console.log(data)
+      const onSubmit = async (data) => {
+
+        console.log(data);
+
             fetch('http://localhost:5000/products', {
                 method: "POST",
                 headers: {
@@ -28,7 +28,6 @@ const AddItem = () => {
                 }
             })
       }
-    
       console.log(watch("example")) 
 
 

@@ -7,9 +7,10 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import useCart from '../../../../hooks/useCart';
 
 const Product = ({product}) => {
+     
 
-    const {id, productName, brand, price, image} = product;
-    // console.log(mobile);
+    const {id, productName, brand, price, image } = product;
+    // console.log(product);
     
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
@@ -60,6 +61,7 @@ const Product = ({product}) => {
 
     return (
         <div className=" bg-[#edecec] ">
+
             <div className='h-[400px]'>
                 <figure className='h-full'>
                     <a href="/product-details">
@@ -70,7 +72,7 @@ const Product = ({product}) => {
 
         {/* <figure>
              <a href="/product-details">
-                 <img src={image} alt="Image" />
+                 <img src={imageURL} alt="Image" />
              </a>
          </figure> */}
 
