@@ -13,7 +13,6 @@ const AddItem = () => {
     const {
         register,
         handleSubmit,
-        watch,
         reset,
         formState: { errors },
       } = useForm()
@@ -23,7 +22,7 @@ const AddItem = () => {
         const formData = new FormData();
         formData.append('image', data.image[0])
 
-        console.log(data);
+        // console.log(data);
 
 
         fetch(image_hosting_url, {
@@ -48,11 +47,12 @@ const AddItem = () => {
                     
                 } 
                 
-                console.log(product)
+                // console.log(product)
                  
                  axiosSecure.post('/products', product)
                  .then(data => {
                     if(data.data.insertedId){
+                        reset();
                         Swal.fire({
                             position: "top-center",
                             icon: "success",
@@ -69,26 +69,26 @@ const AddItem = () => {
 
 
       }
-      console.log(watch("example")) 
+   
 
 
     return (
         <div className='w-full'>
             <h2 className='text-center text-4xl'>Add an Item</h2>
 {/* form div */}
-        <div className='mx-10'>
-            <form onSubmit={handleSubmit(onSubmit)} className='grid grid-cols-1 md:grid-cols-2 gap-x-20'>
-                <div>
+        <div className='mx-10 '>
+            <form onSubmit={handleSubmit(onSubmit)} className='grid grid-cols-1 md:grid-cols-2 md:gap-x-20'>
+                <div className='col-span-2 md:col-span-1'>
                     <label className="form-control">
-                    <div className="label">
+                    <div className="label ">
                         <span className="label-text">Product Image</span>
                     </div>
                     <input type="file" {...register("image", { required: true })} placeholder="Image URL" className="file-input file-input-bordered" />
                     {errors.image && <span>Image is required</span>}
                     </label>
                 </div>
-                <div>
-                    <label className="form-control w-full ">
+                <div className='col-span-2 md:col-span-1'>
+                    <label className="form-control">
                     <div className="label">
                         <span className="label-text">Product Name</span>
                     </div>
@@ -96,7 +96,7 @@ const AddItem = () => {
                     </label>
                 </div>
 
-                <div>
+                <div className='col-span-2 md:col-span-1'>
                 <label className="form-control">
                     <div className="label">
                         <span className="label-text">Product Brand</span>
@@ -116,7 +116,7 @@ const AddItem = () => {
                      
                     </label>
                 </div>
-                <div>
+                <div className='col-span-2 md:col-span-1'>
                 <label className="form-control">
                     <div className="label">
                         <span className="label-text">Product Category</span>
@@ -132,7 +132,7 @@ const AddItem = () => {
                      
                     </label>
                 </div>
-                <div>
+                <div className='col-span-2 md:col-span-1'>
                     <label className="form-control w-full ">
                     <div className="label">
                         <span className="label-text">Product Price</span>
@@ -140,7 +140,7 @@ const AddItem = () => {
                     <input type="number"  {...register("price", { required: true })}  placeholder="Type here" className="input input-bordered  " />
                     </label>
                 </div>
-                <div>
+                <div className='col-span-2 md:col-span-1'>
                 <label className="form-control">
                     <div className="label">
                         <span className="label-text">Product Ratings</span>
@@ -166,15 +166,7 @@ const AddItem = () => {
                     <textarea  {...register("description", { required: true })}  className="textarea textarea-bordered h-24" placeholder="Description"></textarea>
                     </label>
                 </div>
-                {/* testing... */}
-                <div>
-                    <label className="form-control w-full ">
-                    <div className="label">
-                        <span className="label-text">Product Variant</span>
-                    </div>
-                    <input type="text" {...register("variant", { required: true })} placeholder="Type here" className="input input-bordered  " />
-                    </label>
-                </div>
+                 
                
                 <input className='btn btn-warning col-span-2 my-10' type="submit" value="Upload Product" />
             
