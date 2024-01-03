@@ -3,8 +3,9 @@ import { useContext } from 'react';
 import Button from '../../../../components/Button/Button';
 import { AuthContext } from '../../../../providers/AuthProvider';
 import Swal from 'sweetalert2';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useCart from '../../../../hooks/useCart';
+import { IoMdArrowRoundForward } from "react-icons/io";
 
 const Product = ({product}) => {
      
@@ -93,7 +94,11 @@ const Product = ({product}) => {
              </div>
              <div className='flex justify-between'>
                  <Button onClick={() => handleAddToCart(product)} buttonText="Add To Cart"></Button>
-                  <button>See More</button>
+                 <Link to={`/productdetails/${product._id}`}>
+                    <button className='font-bold flex items-center gap-1 mt-4'>
+                        <span>See More</span>  <IoMdArrowRoundForward></IoMdArrowRoundForward>
+                    </button>
+                </Link>
              </div>
          </div>
          </div>

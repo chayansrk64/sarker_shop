@@ -9,8 +9,6 @@ const UpdateProduct = () => {
 
     const product = useLoaderData();
     
-
-
     const {
         register,
         handleSubmit,

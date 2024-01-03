@@ -20,6 +20,7 @@ import Payment from "../pages/Dashboard/User/Payment/Payment";
 import AddReview from "../pages/Dashboard/User/AddReview/AddReview";
 import PrivateRoute from "./PrivateRoute";
 import UpdateProduct from "../pages/Dashboard/Admin/UpdateProduct/UpdateProduct";
+import ProductDetails from "../pages/Home/Products/ProductDetails/ProductDetails";
 
 
 
@@ -43,7 +44,12 @@ const router = createBrowserRouter([
             {
                 path: "/signup",
                 element: <SignUp></SignUp>
-            }
+            },
+            {
+                path: '/productdetails/:id',
+                element: <ProductDetails></ProductDetails>,
+                loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+            },
         ]
     },
     {
@@ -67,6 +73,7 @@ const router = createBrowserRouter([
                 path: 'review',
                 element: <AddReview></AddReview>
             },
+           
            
             
 

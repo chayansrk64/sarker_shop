@@ -34,7 +34,7 @@ const Header = () => {
         {/* activeClassName="active-link" */}
         <li> <Link to="/collections">Collections</Link> </li>
         <li> <Link to="/about" >About</Link> </li>
-        <li><Link to="/profile"></Link>{user?.displayName}</li>
+        {/* <li><Link to="/profile"></Link>{user?.displayName}</li> */}
 
         <li> <Link to={isAdmin ? "/dashboard/adminhome" : "/dashboard/userhome"}>Dashboard</Link> </li>
 
