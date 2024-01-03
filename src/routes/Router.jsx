@@ -19,6 +19,7 @@ import ManageOrder from "../pages/Dashboard/Admin/ManageOrder/ManageOrder";
 import Payment from "../pages/Dashboard/User/Payment/Payment";
 import AddReview from "../pages/Dashboard/User/AddReview/AddReview";
 import PrivateRoute from "./PrivateRoute";
+import UpdateProduct from "../pages/Dashboard/Admin/UpdateProduct/UpdateProduct";
 
 
 
@@ -66,6 +67,7 @@ const router = createBrowserRouter([
                 path: 'review',
                 element: <AddReview></AddReview>
             },
+           
             
 
             //TODO: admin routes 
@@ -88,6 +90,11 @@ const router = createBrowserRouter([
             {
                 path: 'users',
                 element: <AdminRoute><Users></Users></AdminRoute>
+            },
+            {
+                path: 'manageproduct/updateproduct/:id',
+                element: <UpdateProduct></UpdateProduct>,
+                loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
             },
             
         ]

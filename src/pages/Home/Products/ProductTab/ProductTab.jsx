@@ -18,7 +18,7 @@ const ProductTab = ({products}) => {
                 }   */}
 
                 {
-                    products.slice(0, displayCount).map(product => <Product key={product.id} product={product}></Product>)
+                    products.slice(0, displayCount).map(product => <Product key={product._id} product={product}></Product>)
                 }
                 
         </div>
