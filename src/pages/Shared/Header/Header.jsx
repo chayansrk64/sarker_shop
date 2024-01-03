@@ -7,6 +7,7 @@ import useCart from '../../../hooks/useCart';
 import { HiLogout } from "react-icons/hi";
 import { HiLogin } from "react-icons/hi";
 import useAdmin from '../../../hooks/useAdmin';
+import ActiveLinks from '../../../components/ActiveLinks/ActiveLinks';
 
 const Header = () => {
 
@@ -30,21 +31,23 @@ const Header = () => {
 
   const navOptions = <>
          
-        <li> <Link to="/" >Home</Link> </li>
+        <li> <ActiveLinks to="/" 
+        
+        >Home</ActiveLinks> </li>
         {/* activeClassName="active-link" */}
-        <li> <Link to="/collections">Collections</Link> </li>
-        <li> <Link to="/about" >About</Link> </li>
+        <li> <ActiveLinks to="/collections">Collections</ActiveLinks> </li>
+        <li> <ActiveLinks to="/about" >About</ActiveLinks> </li>
         {/* <li><Link to="/profile"></Link>{user?.displayName}</li> */}
 
-        <li> <Link to={isAdmin ? "/dashboard/adminhome" : "/dashboard/userhome"}>Dashboard</Link> </li>
+        <li> <ActiveLinks to={isAdmin ? "/dashboard/adminhome" : "/dashboard/userhome"}>Dashboard</ActiveLinks> </li>
 
         <li>
-          <Link to="/dashboard/mycart" >
+          <ActiveLinks to="/dashboard/mycart" >
             <button className="flex text-xl">
                   <FaShoppingCart />
                   <div className="badge badge-warning">+{cart?.length || 0}</div>
             </button>
-          </Link>
+          </ActiveLinks>
         </li>     
         
 </>
@@ -63,7 +66,7 @@ const Header = () => {
                      {navOptions}
                   </ul>
                 </div>   
-                <a className="btn btn-ghost text-xl">Sarker Shop</a>
+                <a className="btn btn-ghost text-xl" href='/'>Sarker Shop</a>
               </div>
               <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaStar } from "react-icons/fa";
@@ -8,16 +8,12 @@ import { FaStar } from "react-icons/fa";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-
-
-
 import { Pagination, Navigation } from 'swiper/modules';
 
 
 const Reviews = () => {
 
-    const [swiperRef, setSwiperRef] = useState(null);
+     const [swiperRef, setSwiperRef] = useState(null);
 
     const [reviews, setReviews] = useState([]);
 
@@ -67,7 +63,7 @@ const Reviews = () => {
        {reviews.map(review =>  <SwiperSlide key={review.id}>
             <div className='h-[400px]'>
                 <div className='h-20 w-20 m-auto my-6'>
-                    <img className='rounded-full ' src={review.client_photo_url} alt="" />
+                    <img className='rounded-full ' src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" alt="" />
                 </div>
                 <div className='text-center p-6'>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam pariatur accusantium provident neque eligendi, odit excepturi velit corrupti similique harum.</p>
