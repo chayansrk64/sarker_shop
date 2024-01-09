@@ -2,8 +2,7 @@ import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../../../providers/AuthProvider';
 import axios from 'axios';
-import Swal from 'sweetalert2';
- 
+
 const AddReview = () => {
      
     const {user} = useContext(AuthContext);
@@ -24,17 +23,17 @@ const AddReview = () => {
           axios.post('http://localhost:5000/reviews', data)
           .then(res => {
             console.log(res)
-            if(res.data.insertedId > 0){
-                reset();
-                Swal.fire({
-                    position: "top-center",
-                    icon: "success",
-                    title: "Review added successfully!",
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
+            // if(res.data.insertedId > 0){
+                
+            //     Swal.fire({
+            //         position: "top-center",
+            //         icon: "success",
+            //         title: "Review added successfully!",
+            //         showConfirmButton: false,
+            //         timer: 1500
+            //       });
                
-            }
+            // }
           })
 
          

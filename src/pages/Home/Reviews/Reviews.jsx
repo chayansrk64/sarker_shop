@@ -66,7 +66,7 @@ const Reviews = () => {
                     <img className='rounded-full ' src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" alt="" />
                 </div>
                 <div className='text-center p-6'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam pariatur accusantium provident neque eligendi, odit excepturi velit corrupti similique harum.</p>
+                    <p>{review.review}</p>
                     <p className='py-3 font-bold'>{review.client_name}</p>
                     <div className='flex justify-center'>
                     <p><FaStar></FaStar></p>
