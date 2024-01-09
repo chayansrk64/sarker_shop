@@ -2,6 +2,7 @@ import React from 'react';
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Swal from 'sweetalert2';
 import useCart from '../../../../hooks/useCart';
+import { Link } from 'react-router-dom';
 
 const MyCart = () => {
 
@@ -51,7 +52,7 @@ const MyCart = () => {
             <div className='flex justify-between items-center h-[100px] px-5 bg-purple-200 mx-10'>
                 <h2 className='text-2xl font-semibold'>Total Orders: {cart.length}</h2>
                 <h2 className='text-2xl font-semibold'>Total Price: {cartTotalPrice}</h2>
-                <button className='btn btn-warning font-semibold'>PAY</button>
+                <Link to='checkout' className='btn btn-warning font-semibold'>CheckOut</Link>
             </div>
 
             <div className="overflow-x-auto mx-10">
@@ -87,7 +88,7 @@ const MyCart = () => {
                         <td>
                             {item.productName}
                         </td>
-                        <td className=' '>${item.price}</td>
+                        <td className=' '>{item.price}</td>
                         <td>
                             <button onClick={() => handleDeleteItem (item)} className="btn btn-ghost bg-warning text-xl"><RiDeleteBin6Line /></button>
                         </td>

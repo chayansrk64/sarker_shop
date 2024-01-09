@@ -21,6 +21,7 @@ import AddReview from "../pages/Dashboard/User/AddReview/AddReview";
 import PrivateRoute from "./PrivateRoute";
 import UpdateProduct from "../pages/Dashboard/Admin/UpdateProduct/UpdateProduct";
 import ProductDetails from "../pages/Home/Products/ProductDetails/ProductDetails";
+import Checkout from "../pages/Dashboard/User/Checkout/checkout";
 
 
 
@@ -72,6 +73,10 @@ const router = createBrowserRouter([
             {
                 path: 'review',
                 element: <AddReview></AddReview>
+            },
+            {
+                path: 'mycart/checkout',
+                element: <Checkout></Checkout>
             },
            
            
