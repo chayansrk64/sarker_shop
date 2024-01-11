@@ -43,7 +43,7 @@ const ManageProduct = () => {
      
 
     return (
-        <div className='w-full'>
+        <div className='w-full md:mt-16'>
             <h2 className="text-4xl text-center my-10">Manage Product</h2>
 
          <div className="overflow-x-auto mx-10">

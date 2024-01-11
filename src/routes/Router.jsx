@@ -51,66 +51,129 @@ const router = createBrowserRouter([
                 element: <ProductDetails></ProductDetails>,
                 loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
             },
+
+
+            
+            {
+                path: '/dashboard',
+                element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+                children: [
+                    // user routes
+                    {
+                        path: 'userhome',
+                        element: <UserHome></UserHome>
+                    },
+                    {
+                        path: 'payment',
+                        element: <Payment></Payment>
+                    },
+                    {
+                        path: 'mycart',
+                        element: <MyCart></MyCart>
+                    },
+                    {
+                        path: 'review',
+                        element: <AddReview></AddReview>
+                    },
+                    {
+                        path: 'mycart/checkout',
+                        element: <Checkout></Checkout>
+                    },
+                   
+                   
+                    
+        
+                    //TODO: admin routes 
+                    {
+                        path: 'adminhome',
+                        element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
+                    },
+                    {
+                        path: 'additem',
+                        element: <AdminRoute><AddItem></AddItem></AdminRoute>
+                    },
+                    {
+                        path: 'manageproduct',
+                        element: <AdminRoute><ManageProduct></ManageProduct></AdminRoute>
+                    },
+                    {
+                        path: 'manageorders',
+                        element: <AdminRoute><ManageOrder></ManageOrder></AdminRoute>
+                    },
+                    {
+                        path: 'users',
+                        element: <AdminRoute><Users></Users></AdminRoute>
+                    },
+                    {
+                        path: 'manageproduct/updateproduct/:id',
+                        element: <UpdateProduct></UpdateProduct>,
+                        loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+                    },
+                    
+                ]
+            }
+
+
         ]
     },
-    {
-        path: '/dashboard',
-        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
-        children: [
-            // user routes
-            {
-                path: 'userhome',
-                element: <UserHome></UserHome>
-            },
-            {
-                path: 'payment',
-                element: <Payment></Payment>
-            },
-            {
-                path: 'mycart',
-                element: <MyCart></MyCart>
-            },
-            {
-                path: 'review',
-                element: <AddReview></AddReview>
-            },
-            {
-                path: 'mycart/checkout',
-                element: <Checkout></Checkout>
-            },
+    // {
+    //     path: '/dashboard',
+    //     element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+    //     children: [
+    //         // user routes
+    //         {
+    //             path: 'userhome',
+    //             element: <UserHome></UserHome>
+    //         },
+    //         {
+    //             path: 'payment',
+    //             element: <Payment></Payment>
+    //         },
+    //         {
+    //             path: 'mycart',
+    //             element: <MyCart></MyCart>
+    //         },
+    //         {
+    //             path: 'review',
+    //             element: <AddReview></AddReview>
+    //         },
+    //         {
+    //             path: 'mycart/checkout',
+    //             element: <Checkout></Checkout>
+    //         },
            
            
             
 
-            //TODO: admin routes 
-            {
-                path: 'adminhome',
-                element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
-            },
-            {
-                path: 'additem',
-                element: <AdminRoute><AddItem></AddItem></AdminRoute>
-            },
-            {
-                path: 'manageproduct',
-                element: <AdminRoute><ManageProduct></ManageProduct></AdminRoute>
-            },
-            {
-                path: 'manageorders',
-                element: <AdminRoute><ManageOrder></ManageOrder></AdminRoute>
-            },
-            {
-                path: 'users',
-                element: <AdminRoute><Users></Users></AdminRoute>
-            },
-            {
-                path: 'manageproduct/updateproduct/:id',
-                element: <UpdateProduct></UpdateProduct>,
-                loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
-            },
+    //         //TODO: admin routes 
+    //         {
+    //             path: 'adminhome',
+    //             element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
+    //         },
+    //         {
+    //             path: 'additem',
+    //             element: <AdminRoute><AddItem></AddItem></AdminRoute>
+    //         },
+    //         {
+    //             path: 'manageproduct',
+    //             element: <AdminRoute><ManageProduct></ManageProduct></AdminRoute>
+    //         },
+    //         {
+    //             path: 'manageorders',
+    //             element: <AdminRoute><ManageOrder></ManageOrder></AdminRoute>
+    //         },
+    //         {
+    //             path: 'users',
+    //             element: <AdminRoute><Users></Users></AdminRoute>
+    //         },
+    //         {
+    //             path: 'manageproduct/updateproduct/:id',
+    //             element: <UpdateProduct></UpdateProduct>,
+    //             loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+    //         },
             
-        ]
-    }
+    //     ]
+    // }
 ])
 
 
