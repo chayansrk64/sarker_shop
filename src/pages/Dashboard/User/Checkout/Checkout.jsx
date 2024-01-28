@@ -28,7 +28,7 @@ const Checkout = () => {
       }
     
     return (
-        <div className='h-full w-full'>
+        <div className='h-full mt-16 w-full'>
            <div className="text-center text-4xl my-10">Checkout</div>
         <div className=' grid grid-cols-1 md:grid-cols-2 gap-5'>
             

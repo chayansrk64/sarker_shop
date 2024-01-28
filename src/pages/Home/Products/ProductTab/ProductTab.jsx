@@ -22,7 +22,7 @@ const ProductTab = ({products}) => {
                     displayCount < products.length && (<button className='btn btn-warning' onClick={handleShowAll}>
                              Show All
                     </button>)
-                }
+                }  
         </>
     );
 };

@@ -63,45 +63,45 @@ const Product = ({product}) => {
     return (
         <div className=" bg-[#edecec] ">
 
-            <div className='h-[400px]'>
-                <figure className='h-full'>
-                    <a href="/product-details">
-                        <img className='h-full w-full' src={image} alt="Image" />
-                    </a>
-                </figure>
-            </div>
+        <div className='h-[400px]'>
+            <figure className='h-full'>
+                <a href="/product-details">
+                    <img className='h-full w-full' src={image} alt="Image" />
+                </a>
+            </figure>
+        </div>
 
-        {/* <figure>
-             <a href="/product-details">
-                 <img src={imageURL} alt="Image" />
-             </a>
-         </figure> */}
+    {/* <figure>
+         <a href="/product-details">
+             <img src={imageURL} alt="Image" />
+         </a>
+     </figure> */}
 
-         
-         <div className="card-body">
-             <h2 className="card-title">
-             {productName}
-             <div className="badge badge-secondary">NEW</div>
-             </h2>
-             <p>{brand}</p>
-             <div className="card-actions justify-end">
-             <div className="">
-                 <span>Price:</span> <del>{price}</del>
-             </div> 
-             <div className="">
-                 <p>{price}</p>
-             </div>
-             </div>
-             <div className='flex justify-between'>
-                 <Button onClick={() => handleAddToCart(product)} buttonText="Add To Cart"></Button>
-                 <Link to={`/productdetails/${product._id}`}>
-                    <button className='font-bold flex items-center gap-1 mt-4'>
-                        <span>See More</span>  <IoMdArrowRoundForward></IoMdArrowRoundForward>
-                    </button>
-                </Link>
-             </div>
+
+     <div className="card-body">
+         <h2 className="card-title">
+         {productName}
+         <div className="badge badge-secondary">NEW</div>
+         </h2>
+         <p>{brand}</p>
+         <div className="card-actions justify-end">
+         <div className="">
+             <span>Price:</span> <del>{price}</del>
+         </div> 
+         <div className="">
+             <p>{price}</p>
          </div>
          </div>
+         <div className='flex justify-between'>
+             <Button onClick={() => handleAddToCart(product)} buttonText="Add To Cart"></Button>
+             <Link to={`/productdetails/${product._id}`}>
+                <button className='font-bold flex items-center gap-1 mt-4'>
+                    <span>See More</span>  <IoMdArrowRoundForward></IoMdArrowRoundForward>
+                </button>
+            </Link>
+         </div>
+     </div>
+     </div>
     );
 };
 
