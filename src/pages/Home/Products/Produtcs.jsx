@@ -25,7 +25,7 @@ const Produtcs = () => {
 
     return (
 
-        <>
+        <div className='mx-32'>
         {/* tabs */}
 
         <h2 className='text-5xl text-center my-10'>Explore</h2>
@@ -55,7 +55,7 @@ const Produtcs = () => {
 
       
 
-        </>
+        </div>
     );
 };
 

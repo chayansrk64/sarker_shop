@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import Product from '../Product/Product';
+import { Link } from 'react-router-dom';
 
 const ProductTab = ({products}) => {
-    const [displayCount, setDisplayCount] = useState(3)
+    // const [displayCount, setDisplayCount] = useState(6)
 
-    const handleShowAll = () => {
-        setDisplayCount(products.length)
-    }
+    // const handleShowAll = () => {
+    //     setDisplayCount(products.length)
+    // }
 
     return (
         <>
@@ -14,15 +15,22 @@ const ProductTab = ({products}) => {
                 
         
                 {
-                    products.slice(0, displayCount).map(product => <Product key={product._id} product={product}></Product>)
+                    products.slice(0, 6).map(product => <Product key={product._id} product={product}></Product>)
                 }
                 
         </div>
-                {
+                {/* {
                     displayCount < products.length && (<button className='btn btn-warning' onClick={handleShowAll}>
-                             Show All
+                             See Collection
                     </button>)
-                }  
+                }   */}
+                <div className='text-center'>
+                    {
+                        <Link to="/collection" className='btn btn-warning'>
+                                See Collection
+                        </Link>
+                    }  
+                </div>
         </>
     );
 };

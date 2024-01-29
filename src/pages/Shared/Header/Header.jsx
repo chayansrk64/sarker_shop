@@ -35,7 +35,7 @@ const Header = () => {
         
         >Home</ActiveLinks> </li>
         {/* activeClassName="active-link" */}
-        <li> <ActiveLinks to="/collections">Collections</ActiveLinks> </li>
+        <li> <ActiveLinks to="/collection">Collection</ActiveLinks> </li>
         <li> <ActiveLinks to="/about" >About</ActiveLinks> </li>
         {/* <li><Link to="/profile"></Link>{user?.displayName}</li> */}
 

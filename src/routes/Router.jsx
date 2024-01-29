@@ -23,6 +23,7 @@ import UpdateProduct from "../pages/Dashboard/Admin/UpdateProduct/UpdateProduct"
 import ProductDetails from "../pages/Home/Products/ProductDetails/ProductDetails";
 import Checkout from "../pages/Dashboard/User/Checkout/checkout";
 import ManagePayment from "../pages/Dashboard/Admin/ManagePayment/ManagePayment";
+import Collection from "../pages/Collection/Collection";
 
 
 
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
             {
                 path: "/about",
                 element: <About></About>
+            },
+            {
+                path: "/collection",
+                element: <Collection></Collection>
             },
             {
                 path: "/login",

@@ -65,23 +65,19 @@ const Product = ({product}) => {
 
         <div className='h-[400px]'>
             <figure className='h-full'>
-                <a href="/product-details">
+                <Link to={`/productdetails/${product._id}`} href="/product-details">
                     <img className='h-full w-full' src={image} alt="Image" />
-                </a>
+                </Link>
             </figure>
         </div>
 
-    {/* <figure>
-         <a href="/product-details">
-             <img src={imageURL} alt="Image" />
-         </a>
-     </figure> */}
+    
 
 
      <div className="card-body">
          <h2 className="card-title">
          {productName}
-         <div className="badge badge-secondary">NEW</div>
+          
          </h2>
          <p>{brand}</p>
          <div className="card-actions justify-end">
