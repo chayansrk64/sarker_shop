@@ -15,7 +15,8 @@ const MyCart = () => {
         totalPrice.push(price);
     })
    
-    const cartTotalPrice = totalPrice.reduce((total, currentValue) => total + currentValue, 0);
+    const cartTotalPriceDecimal = totalPrice.reduce((total, currentValue) => total + currentValue, 0);
+    const cartTotalPrice = cartTotalPriceDecimal.toFixed(2)
     
     const handleDeleteItem = item => {
         Swal.fire({

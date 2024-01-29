@@ -1,11 +1,8 @@
-import React, { useContext } from 'react';
-
 import { useQuery } from '@tanstack/react-query';
-import { RiDeleteBin6Line } from 'react-icons/ri';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../../../providers/AuthProvider';
 
-const Payment = () => {
-  
+const ManagePayment = () => {
     const {user, loading} = useContext(AuthContext);
     const {refetch, data: payments = []} = useQuery({
         queryKey: ['payments'],
@@ -20,20 +17,13 @@ const Payment = () => {
         
     })
 
-    const myPayments = payments.filter(payment => {
-        if(payment.email === user.email){
-            return payment;
-        }
-    })
-    
-
+ 
 
     return (
-        <div>
-            <h2 className="text-4xl my-10">Payment</h2>
+        <div className='w-full my-16'>
+            <h2 className='text-4xl my-10 text-center'>Manage payment</h2>
 
             <div className="overflow-x-auto mx-10">
-            
             <table className="table">
                 {/* head */}
                 <thead>
@@ -54,9 +44,8 @@ const Payment = () => {
                 </thead>
                 <tbody>
                 {/* row  */}
-                 
                 {
-                    myPayments.map((payment, index) =>  <tr key={payment._id}>
+                    payments.map((payment, index) =>  <tr key={payment._id}>
                         <td>
                         <label>
                             {index + 1}
@@ -73,7 +62,10 @@ const Payment = () => {
                         <td> {payment.items}</td>
                         <td> {payment.cartTotalPrice}</td>
                         <td>
-                         <button  className="btn btn-ghost bg-warning text-xl"><RiDeleteBin6Line /></button>
+                         <button
+                            className="btn btn-ghost bg-warning">
+                            OK
+                        </button>
                         </td>
                     </tr>)
                 }
@@ -86,8 +78,9 @@ const Payment = () => {
             </table>
             </div>
 
+             
         </div>
     );
 };
 
-export default Payment;
+export default ManagePayment;

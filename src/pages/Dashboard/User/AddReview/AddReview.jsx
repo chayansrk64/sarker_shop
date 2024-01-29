@@ -24,6 +24,7 @@ const AddReview = () => {
           axios.post('http://localhost:5000/reviews', data)
           .then(res => {
             console.log(res)
+            reset();
             if(res.data.insertedId){
                 
                 Swal.fire({

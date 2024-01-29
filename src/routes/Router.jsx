@@ -22,6 +22,7 @@ import PrivateRoute from "./PrivateRoute";
 import UpdateProduct from "../pages/Dashboard/Admin/UpdateProduct/UpdateProduct";
 import ProductDetails from "../pages/Home/Products/ProductDetails/ProductDetails";
 import Checkout from "../pages/Dashboard/User/Checkout/checkout";
+import ManagePayment from "../pages/Dashboard/Admin/ManagePayment/ManagePayment";
 
 
 
@@ -99,6 +100,10 @@ const router = createBrowserRouter([
                     {
                         path: 'manageorders',
                         element: <AdminRoute><ManageOrder></ManageOrder></AdminRoute>
+                    },
+                    {
+                        path: 'payments',
+                        element: <AdminRoute><ManagePayment></ManagePayment></AdminRoute>
                     },
                     {
                         path: 'users',

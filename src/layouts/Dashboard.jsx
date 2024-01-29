@@ -48,6 +48,7 @@ const Dashboard = () => {
                 <li><NavLink to="/dashboard/additem"><FaMobileAlt />Add Product</NavLink></li>
                 <li><NavLink to="/dashboard/manageproduct"><TfiWrite />Manage Products</NavLink></li>
                 <li><NavLink to="/dashboard/manageorders"><FaWallet />Manage Orders</NavLink></li>
+                <li><NavLink to="/dashboard/payments"><FaWallet />Manage Payment</NavLink></li>
                 <li><NavLink to="/dashboard/users"><FaAddressBook />Users</NavLink></li>
 
                 </> 

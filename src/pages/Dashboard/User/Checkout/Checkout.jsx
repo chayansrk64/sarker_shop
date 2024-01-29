@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext, useRef } from 'react';
 import useCart from '../../../../hooks/useCart';
 import { useForm } from 'react-hook-form';
+import bKash from '../../../../assets/bKash.png';
+import axios from 'axios';
+import Swal from 'sweetalert2';
+import { AuthContext } from '../../../../providers/AuthProvider';
 
 const Checkout = () => {
 
+    const {user} = useContext(AuthContext);
     const [cart, refetch] = useCart();
     // console.log(cart);
     const totalPrice = [];
@@ -13,8 +18,12 @@ const Checkout = () => {
         totalPrice.push(price);
     })
    
-    const cartTotalPrice = totalPrice.reduce((total, currentValue) => total + currentValue, 0);
+    const cartTotalPriceDecimal = totalPrice.reduce((total, currentValue) => total + currentValue, 0);
+    const cartTotalPrice = cartTotalPriceDecimal.toFixed(2);
+    const items = cart.length;
 
+    const bKashNumberRef = useRef(null);
+     
 
     const {
         register,
@@ -24,8 +33,40 @@ const Checkout = () => {
       } = useForm()
     
       const onSubmit = async (data) => {
-        console.log(data)
+        const bKashNum = bKashNumberRef.current?.innerText;
+        const updateData = {...data, bKashNum, items, cartTotalPrice, email: user.email}
+        console.log(updateData);
+
+        axios.post('http://localhost:5000/transaction', updateData)
+        .then(res => {
+            console.log(res)
+            reset();
+            if(res.data.insertedId){
+                
+                Swal.fire({
+                    title: "Transaction Successfull!",
+                    showClass: {
+                      popup: `
+                        animate__animated
+                        animate__fadeInUp
+                        animate__faster
+                      `
+                    },
+                    hideClass: {
+                      popup: `
+                        animate__animated
+                        animate__fadeOutDown
+                        animate__faster
+                      `
+                    }
+                  });
+               
+            }
+        })
+
       }
+
+     
     
     return (
         <div className='h-full mt-16 w-full'>
@@ -52,7 +93,7 @@ const Checkout = () => {
                         <span className="label-text text-3xl font-semibold">Delivery</span>
                         
                     </div>
-                    <select defaultValue="Pick One" {...register("location", { required: true })}  className="select select-bordered">
+                    <select defaultValue="Pick One" {...register("delivery", { required: true })}  className="select select-bordered">
                         <option disabled >Pick One</option>
                         <option>Dhaka</option>
                         <option>Kishoregonj</option>
@@ -87,7 +128,7 @@ const Checkout = () => {
                     </label>
                 </div>
 
-                <div className='col-span-2'>
+                <div className='col-span-1'>
                     <label className="form-control">
                     <div className="label ">
                         <span className="label-text ">Address</span>
@@ -96,6 +137,36 @@ const Checkout = () => {
                     {errors.image && <span>Last name is required</span>}
                     </label>
                 </div>
+                <div className='col-span-1'>
+                    <label className="form-control">
+                    <div className="label ">
+                        <span className="label-text ">Email</span>
+                    </div>
+                    
+                    <strong className='text-xl' >{user.email}</strong>
+                    </label>
+                </div>
+
+                 
+
+                <div className='flex items-center justify-between col-span-2 my-2 border rounded-lg '>
+                    <img src={bKash} width="150px" alt="" />
+                    <strong className='text-2xl' ref={bKashNumberRef} >01567890123</strong>
+                </div>
+
+                 
+
+                <div className='col-span-1'>
+                    <label className="form-control">
+                    <div className="label ">
+                        <span className="label-text">bKash Transaction ID</span>
+                    </div>
+                    <input type="text" {...register("tranId", { required: true })} placeholder="Transaction ID" className="input input-bordered" />
+                    {errors.image && <span>Last name is required</span>}
+                    </label>
+                </div>
+
+
 
                
                 
