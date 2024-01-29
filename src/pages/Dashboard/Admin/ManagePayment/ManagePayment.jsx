@@ -1,9 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../../../providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const ManagePayment = () => {
+
     const {user, loading} = useContext(AuthContext);
+
     const {refetch, data: payments = []} = useQuery({
         queryKey: ['payments'],
         enabled: !loading,
@@ -16,6 +19,36 @@ const ManagePayment = () => {
         }
         
     })
+
+    
+
+    const paidStyle = {
+        color: 'white',
+        background: 'green'
+      };
+
+    const handlePaid = payment => {
+        console.log(payment)
+       
+            fetch(`http://localhost:5000/transaction/paid/${payment._id}`, {
+                method: "PATCH"
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if(data.modifiedCount){
+                    refetch();
+                    Swal.fire({
+                        position: "top-center",
+                        icon: "success",
+                        title: `Payment Successfull!`,
+                        showConfirmButton: false,
+                        timer: 1500
+                      });
+                }
+            })
+        
+    }
 
  
 
@@ -45,7 +78,8 @@ const ManagePayment = () => {
                 <tbody>
                 {/* row  */}
                 {
-                    payments.map((payment, index) =>  <tr key={payment._id}>
+                    payments.map((payment, index) =>  <tr key={payment._id}
+                    style={payment.role === 'paid' ?  paidStyle : {}} >
                         <td>
                         <label>
                             {index + 1}
@@ -63,8 +97,10 @@ const ManagePayment = () => {
                         <td> {payment.cartTotalPrice}</td>
                         <td>
                          <button
+                            style={payment.role === 'paid' ?  paidStyle : {}}
+                            onClick={() => handlePaid (payment)}
                             className="btn btn-ghost bg-warning">
-                            OK
+                            Paid
                         </button>
                         </td>
                     </tr>)
