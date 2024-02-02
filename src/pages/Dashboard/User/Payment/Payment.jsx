@@ -29,10 +29,10 @@ const Payment = () => {
 
 
     return (
-        <div>
-            <h2 className="text-4xl my-10">Payment</h2>
+        <div className='w-full my-16'>
+            <h2 className="text-4xl my-10 text-center">Payment</h2>
 
-            <div className="overflow-x-auto mx-10">
+            <div className="overflow-x-auto md:mx-10">
             
             <table className="table">
                 {/* head */}

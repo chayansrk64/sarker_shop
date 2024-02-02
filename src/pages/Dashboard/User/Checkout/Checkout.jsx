@@ -74,7 +74,7 @@ const Checkout = () => {
         <div className=' grid grid-cols-1 md:grid-cols-2 gap-5'>
             
             {/* left side */}
-             <div className="ms-4">
+             <div className="md:ms-4 mx-4">
              <form onSubmit={handleSubmit(onSubmit)} className='grid grid-cols-1 md:grid-cols-2 md:gap-x-20'>
                 <div className='col-span-2 mb-5'>
                     <label className="form-control">

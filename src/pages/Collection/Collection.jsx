@@ -24,7 +24,7 @@ const Collection = () => {
             <h2 className='my-16 text-3xl'>Collection Page</h2>
 
             {/* all products */}
-            <div className='my-20 grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-32'>
+            <div className='my-20 grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-4 md:mx-32'>
                 {
                     products.map(product => <CollectionProducts product={product} key={product._id}></CollectionProducts>)
                 }

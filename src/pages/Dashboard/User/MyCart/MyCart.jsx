@@ -50,7 +50,7 @@ const MyCart = () => {
 
     return (
         <div className=' w-full'>
-            <div className='flex justify-between items-center h-[100px] px-5 bg-purple-200 mx-10'>
+            <div className='flex justify-between items-center h-[100px] px-5 bg-purple-200 md:mx-10'>
                 <h2 className='text-2xl font-semibold'>Total Orders: {cart.length}</h2>
                 <h2 className='text-2xl font-semibold'>Total Price: {cartTotalPrice}</h2>
                 <Link to='checkout' className='btn btn-warning font-semibold'>CheckOut</Link>
