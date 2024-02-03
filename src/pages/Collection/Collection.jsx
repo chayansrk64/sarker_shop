@@ -9,9 +9,8 @@ const Collection = () => {
 
     const [products] = useProducts();
     
-
-    console.log(products)
     return (
+
         <div>
             {/* banner */}
             <div className='my-16 relative'>
