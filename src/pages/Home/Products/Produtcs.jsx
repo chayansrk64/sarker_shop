@@ -8,7 +8,7 @@ import ProductTab from './ProductTab/ProductTab';
 const Produtcs = () => {
 
     const [products] = useProducts();
-    // console.log(products);
+    console.log(products);
 
 
     const mobiles = products.filter(product => product.category === "mobile");

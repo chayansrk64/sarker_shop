@@ -7,6 +7,7 @@ const useProducts = () => {
         queryKey: ['products'],
         queryFn: async () => {
             const res = await fetch('http://localhost:5000/products')
+            // console.log(res)
             return res.json();
         }
     })

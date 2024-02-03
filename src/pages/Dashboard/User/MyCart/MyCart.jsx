@@ -9,9 +9,9 @@ const MyCart = () => {
     const [cart, refetch] = useCart();
     // console.log(cart);
     const totalPrice = [];
+    
     cart?.map(item => {
-        const [currency, money] = item.price.split('$'); // TODO: have to chage the dababase price into only number
-        const price = parseFloat(money);
+        const price = item.price;
         totalPrice.push(price);
     })
    

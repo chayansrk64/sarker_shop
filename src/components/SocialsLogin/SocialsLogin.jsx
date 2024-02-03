@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from '../../providers/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { FcGoogle } from "react-icons/fc";
 
 const SocialsLogin = () => {
 
@@ -37,8 +37,8 @@ const SocialsLogin = () => {
         <div>
         <div className="divider"></div>
         <div className='text-center mb-5'>
-          <button onClick={handleGoogleSignIn} className="btn btn-circle btn-outline">
-            <FaGoogle></FaGoogle>
+          <button onClick={handleGoogleSignIn} className="btn btn-outline">
+          <span className='text-3xl'><FcGoogle /></span> <span>Continue With Google</span>
           </button>
         </div>
       </div>

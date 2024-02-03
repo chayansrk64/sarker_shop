@@ -8,6 +8,7 @@ import { HiLogout } from "react-icons/hi";
 import { HiLogin } from "react-icons/hi";
 import useAdmin from '../../../hooks/useAdmin';
 import ActiveLinks from '../../../components/ActiveLinks/ActiveLinks';
+import { FaUser } from 'react-icons/fa6';
 
 const Header = () => {
 
@@ -39,16 +40,8 @@ const Header = () => {
         <li> <ActiveLinks to="/about" >About</ActiveLinks> </li>
         {/* <li><Link to="/profile"></Link>{user?.displayName}</li> */}
 
-        <li> <ActiveLinks to={isAdmin ? "/dashboard/adminhome" : "/dashboard/userhome"}>Dashboard</ActiveLinks> </li>
+        {/* <li> <ActiveLinks to={isAdmin ? "/dashboard/adminhome" : "/dashboard/userhome"}>Dashboard</ActiveLinks> </li> */}
 
-        <li>
-          <ActiveLinks to="/dashboard/mycart" >
-            <button className="flex text-xl">
-                  <FaShoppingCart />
-                  <div className="badge badge-warning">{cart?.length || 0}</div>
-            </button>
-          </ActiveLinks>
-        </li>     
         
 </>
 
@@ -73,15 +66,28 @@ const Header = () => {
                   {navOptions}
                 </ul>
               </div>
-              {/* login and singup */}
+              {/* login, singup, cart  */}
               <div className="navbar-end flex gap-2">
+              <Link>
+                <ActiveLinks to="/dashboard/mycart" >
+                  <button className="flex text-xl">
+                        <FaShoppingCart />
+                        <div className="badge badge-warning">{cart?.length || 0}</div>
+                  </button>
+                </ActiveLinks>
+             </Link>    
                 {
                   user ?
                   <>
-                  <img className='w-10 rounded-full' src={user?.photoURL} alt="" />
-                  <button title='LogOut' onClick={handleLogOut} className="p-2 text-2xl">
-                  <HiLogout />
-                  </button>
+                    {/* <img className='w-10 rounded-full' src={user?.photoURL} alt="" /> */}
+                    <Link>
+                      <ActiveLinks to={isAdmin ? "/dashboard/adminhome" : "/dashboard/userhome"}>
+                       <span className='text-xl'><FaUser></FaUser></span>
+                      </ActiveLinks>
+                    </Link>
+                    <button title='LogOut' onClick={handleLogOut} className="p-2 text-2xl">
+                    <HiLogout />
+                    </button>
                   </>
                    :
                   <><Link title='LogIn' to="/login" className="p-2 text-2xl">

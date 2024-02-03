@@ -21,9 +21,9 @@ import AddReview from "../pages/Dashboard/User/AddReview/AddReview";
 import PrivateRoute from "./PrivateRoute";
 import UpdateProduct from "../pages/Dashboard/Admin/UpdateProduct/UpdateProduct";
 import ProductDetails from "../pages/Home/Products/ProductDetails/ProductDetails";
-import Checkout from "../pages/Dashboard/User/Checkout/checkout";
 import ManagePayment from "../pages/Dashboard/Admin/ManagePayment/ManagePayment";
 import Collection from "../pages/Collection/Collection";
+import Checkout from "../pages/Dashboard/User/Checkout/Checkout";
 
 
 

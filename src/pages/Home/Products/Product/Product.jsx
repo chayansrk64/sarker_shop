@@ -10,7 +10,7 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 const Product = ({product}) => {
      
 
-    const {id, productName, brand, price, image } = product;
+    const {id, productName, brand, price, image, strikePrice } = product;
     // console.log(product);
     
     const {user} = useContext(AuthContext);
@@ -82,7 +82,7 @@ const Product = ({product}) => {
          <p>{brand}</p>
          <div className="card-actions justify-end">
          <div className="">
-             <span>Price:</span> <del>{price}</del>
+             <span>Price:</span> <del>{strikePrice}</del>
          </div> 
          <div className="">
              <p>{price}</p>
