@@ -13,8 +13,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 
 const Reviews = () => {
 
-     const [swiperRef, setSwiperRef] = useState(null);
-
+    const [swiperRef, setSwiperRef] = useState(null);
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
@@ -22,6 +21,7 @@ const Reviews = () => {
         .then(res => res.json())
         .then(data => {
             setReviews(data)
+           
         })
     },[])
 
@@ -60,7 +60,7 @@ const Reviews = () => {
               },
           }}
       >
-       {reviews.map(review =>  <SwiperSlide key={review.id}>
+       {reviews.map(review =>  <SwiperSlide key={review._id}>
             <div className='h-[400px]'>
                 <div className='h-20 w-20 m-auto my-6'>
                     <img className='rounded-full ' src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" alt="" />

@@ -13,9 +13,10 @@ const Checkout = () => {
     // console.log(cart);
     const totalPrice = [];
     cart?.map(item => {
-        const [currency, money] = item.price.split('$'); // TODO: have to chage the dababase price into only number
-        const price = parseFloat(money);
-        totalPrice.push(price);
+        // console.log('chekcout items',item);
+        // const [currency, money] = item.price.split('$'); // TODO: have to chage the dababase price into only number
+        // const price = parseFloat(money);
+        totalPrice.push(item.price);
     })
    
     const cartTotalPriceDecimal = totalPrice.reduce((total, currentValue) => total + currentValue, 0);
