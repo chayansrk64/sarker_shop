@@ -6,8 +6,7 @@ const Blog = () => {
         <div className='my-[100px] max-w-[70%] mx-auto'>
             <div className='text-center text-4xl font-semibold mb-[100px]'>READ THE BLOG</div>
 
-            
-             
+
             <div className='grid grid-cols-1 lg:grid-cols-5 gap-20'>
                 
                 <div className='col-span-3 '>
