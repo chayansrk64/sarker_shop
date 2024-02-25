@@ -64,9 +64,9 @@ const Product = ({product}) => {
         <div className=" bg-[#edecec] ">
 
         <div className='h-[400px]'>
-            <figure className='h-full'>
+            <figure className='h-full overflow-hidden'>
                 <Link to={`/productdetails/${product._id}`} href="/product-details">
-                    <img className='h-full w-full' src={image} alt="Image" />
+                    <img className='h-full w-full transition-transform duration-700 transform scale-100 hover:scale-105' src={image} alt="Image" />
                 </Link>
             </figure>
         </div>

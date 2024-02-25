@@ -28,7 +28,7 @@ const Produtcs = () => {
         <div className='mx-4 max-w-[1400px] lg:px-[100px] lg:mx-auto'>
         {/* tabs */}
 
-        <h2 className='text-5xl text-center my-10'>Explore</h2>
+        <h2 className='text-5xl text-center font-semibold my-10'>Explore</h2>
 
         <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
 
