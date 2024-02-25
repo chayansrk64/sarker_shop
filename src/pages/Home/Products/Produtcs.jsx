@@ -25,7 +25,7 @@ const Produtcs = () => {
 
     return (
 
-        <div className='mx-4 md:mx-32'>
+        <div className='mx-4 max-w-[1400px] lg:px-[100px] lg:mx-auto'>
         {/* tabs */}
 
         <h2 className='text-5xl text-center my-10'>Explore</h2>

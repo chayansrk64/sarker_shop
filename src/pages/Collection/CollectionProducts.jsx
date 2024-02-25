@@ -8,11 +8,12 @@ import { AuthContext } from '../../providers/AuthProvider';
 
 const CollectionProducts = ({product}) => {
 
-    
+
     const {id, productName, brand, price, image } = product;
     // console.log(product);
     
     const {user} = useContext(AuthContext);
+    
     const navigate = useNavigate();
     const location = useLocation();
     const [, refetch] = useCart();
