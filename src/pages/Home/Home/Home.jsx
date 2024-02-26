@@ -4,6 +4,7 @@ import Produtcs from '../Products/Produtcs';
 import Reviews from '../Reviews/Reviews';
 import StaticBanner from '../StaticBanner/StaticBanner';
 import Blog from '../Blog/Blog';
+import SatitcBannerTwo from '../StaticBannerTwo/SatitcBannerTwo';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <Produtcs></Produtcs>
             <StaticBanner></StaticBanner>
             <Blog></Blog>
+            <SatitcBannerTwo></SatitcBannerTwo>
             <Reviews></Reviews>
         </div>
     );
